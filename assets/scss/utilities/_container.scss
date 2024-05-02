@@ -1,0 +1,5 @@
+.container {
+  @media (min-width: 1200px) {
+    max-width: calc(73.125rem + (var(--bs-gutter-x) / 2) * 2);
+  }
+}
