@@ -1,0 +1,18 @@
+:root {
+  --header-padding-x: 0;
+  --header-padding-y: 0.938rem;
+  --header-background-color: #ffffff;
+  --header-shadow-color: rgba(0, 0, 0, 0.05);
+}
+
+.header {
+  position: relative;
+  z-index: 1;
+  padding: var(--header-padding-y) var(--header-padding-x);
+  background-color: var(--header-background-color);
+  box-shadow: 0px 10px 20px var(--header-shadow-color);
+
+  &-profile {
+    position: relative;
+  }
+}
