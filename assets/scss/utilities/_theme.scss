@@ -1,6 +1,51 @@
 :root {
+  --bs-font-sans-serif: "SF UI Display", sans-serif;
   --bs-body-bg: #edeff5;
+  --bs-body-color: #222a37;
+  --bs-body-color-rgb: 34, 42, 55;
+
+  --bs-blue: #009fd6 !important;
+  --bs-primary: #009fd6 !important;
+  --bs-primary-rgb: 0, 159, 214 !important;
+
+  --content-padding-y: 1.875rem;
+
+  // buttons
+  .btn {
+    &-primary {
+      --bs-btn-color: var(--bs-white);
+      --bs-btn-hover-color: var(--bs-white);
+      --bs-btn-active-color: var(--bs-white);
+    }
+    &-outline {
+      &-primary {
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-active-color: var(--bs-white);
+      }
+    }
+  }
+
+  // card default config
   .card {
+    --bs-border-radius: 0.313rem;
+    --bs-card-spacer-y: 1rem;
+    --bs-card-spacer-x: 1rem;
+    --bs-card-title-spacer-y: 0.5rem;
+    --bs-card-title-color: ;
+    --bs-card-subtitle-color: ;
+    --bs-card-border-width: var(--bs-border-width);
+    --bs-card-border-color: var(--bs-border-color-translucent);
+    --bs-card-border-radius: var(--bs-border-radius);
+    --bs-card-box-shadow: ;
+    --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+    --bs-card-cap-padding-y: 0.5rem;
+    --bs-card-cap-padding-x: 1rem;
+    --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+    --bs-card-cap-color: ;
+    --bs-card-height: ;
+    --bs-card-color: ;
     --bs-card-bg: var(--bs-white);
+    --bs-card-img-overlay-padding: 1rem;
+    --bs-card-group-margin: 0.75rem;
   }
 }

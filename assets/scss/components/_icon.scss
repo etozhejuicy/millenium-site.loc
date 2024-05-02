@@ -1,0 +1,12 @@
+.icon {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: var(--bs-body-font-size);
+    height: var(--bs-body-font-size);
+    & > * {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}

@@ -1,168 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Millenium - demo</title>
-  </head>
-  <body>
-    <!-- header -->
-    <header class="header">
-      <div class="header-inner">
-        <div class="container">
-          <div class="row g-3">
-            <div class="col-12">
-              <div class="header-top">
-                <div class="header-top-left">
-                  <div class="operating-mode">
-                    <div class="text-secondary">Круглосуточно</div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Millennium - demo</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="container">
+        <div class="row g-3">
+          <div class="col-12">
+            <div class="header-top">
+              <div class="header-top-left">
+                <div class="header-operating-mode">
+                  <div class="text-secondary">Круглосуточно</div>
+                </div>
+                <div class="header-contacts">
+                  <div class="header-contacts-item">
+                    Москва, Санкт-Петербург и регионы РФ:
+                    <a class="header-contacts-link" href="tel:8 (495) 138 16 16">8 (495) 138 16 16</a>
                   </div>
-                  <div class="header-contacts">
-                    <div class="row">
-                      <div class="col-auto">
-                        Москва, Санкт-Петербург и регионы РФ:
-                        <a
-                          class="text-decoration-none"
-                          href="tel:8 (495) 138 16 16"
-                          >8 (495) 138 16 16</a
-                        >
-                      </div>
-                      <div class="col-auto">
-                        Казань:
-                        <a
-                          class="text-decoration-none"
-                          href="tel:8 (843) 208 66 36"
-                          >8 (843) 208 66 36</a
-                        >
-                      </div>
-                      <div class="col-auto">
-                        Самара:
-                        <a
-                          class="text-decoration-none"
-                          href="tel:8 (846) 300 26 06"
-                          >8 (846) 300 26 06</a
-                        >
-                      </div>
-                    </div>
+                  <div class="header-contacts-item">
+                    Казань:
+                    <a class="header-contacts-link" href="tel:8 (843) 208 66 36">8 (843) 208 66 36</a>
+                  </div>
+                  <div class="header-contacts-item">
+                    Самара:
+                    <a class="header-contacts-link" href="tel:8 (846) 300 26 06">8 (846) 300 26 06</a>
                   </div>
                 </div>
-                <div class="header-top-right">
-                  <div class="row">
-                    <div class="col">
-                      <div class="header-profile">
-                        <div class="header-profile-avatar">
-                          <img
-                            data-src="/assets/images/file.jpg"
-                            class="lazyload"
-                          />
+              </div>
+              <div class="header-top-right">
+                <div class="row align-items-center">
+                  <div class="col">
+                    <div class="header-profile cursor-pointer" data-bs-toggle="dropdown" aria-expanded="false">
+                      <div class="header-profile-avatar">
+                        <img data-src="/assets/images/file.jpg" class="lazyload" />
+                      </div>
+                      <div class="header-profile-info">
+                        <div class="header-profile-name">
+                          Мануйлова Юлия Алексеевна-Спиридоновна
                         </div>
-                        <div class="header-profile-info">
-                          <div class="header-profile-name">
-                            Мануйлова Юлия Александровна
-                          </div>
-                          <div class="header-profile-company">
-                            тест компании
-                          </div>
+                        <div class="header-profile-company">
+                          (Тест компании ООО)
                         </div>
-                        <a href="/profile" class="stretched-link"></a>
                       </div>
                     </div>
-                    <div class="col-auto">
-                      <div class="header-top-nav">
-                        <button type="button" class="btn btn-sm">lang</button>
-                        <button type="button" class="btn btn-sm">вых.</button>
-                      </div>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Профиль</a></li>
+                      <li><a class="dropdown-item" href="#">Настройки</a></li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                      <li><a class="dropdown-item" href="#">Выход</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-auto">
+                    <div class="header-top-nav dropend">
+                      <span class="icon cursor-pointer" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="/assets/images/lang/rus.svg" language-icon />
+                      </span>
+                      <ul class="dropdown-menu" language-list>
+                        <li>
+                          <input name="language" id="rus_lang" value="rus" type="radio" checked hidden />
+                          <label class="dropdown-item cursor-pointer" href="#" for="rus_lang">
+                            Рус.
+                          </label>
+                        </li>
+                        <li>
+                          <input name="language" id="eng_lang" value="eng" type="radio" hidden />
+                          <label class="dropdown-item cursor-pointer" href="#" for="eng_lang">
+                            Eng.
+                          </label>
+                        </li>
+                      </ul>
+
+                      <span class="icon cursor-pointer">
+                        <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg"
+                          aria-hidden="true" focusable="false">
+                          <use xlink:href="./assets/sprite.svg#exit"></use>
+                        </svg>
+                      </span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-auto">
-              <a href="/" class="header-logo">
-                <img src="/assets/images/logo.svg" />
+          </div>
+          <!-- header logo -->
+          <div class="col-auto">
+            <a href="/" class="header-logo">
+              <img src="/assets/images/logo.svg" />
+            </a>
+          </div>
+          <!-- header nav -->
+          <div class="col">
+            <nav class="nav">
+              <a href="javascript://" class="nav-item" data-bs-toggle="modal" data-bs-target="#createTicket">
+                <div class="nav-link">Авиабилеты</div>
               </a>
+              <a href="javascript://" class="nav-item" data-bs-toggle="modal" data-bs-target="#createTicket">
+                <div class="nav-link">Ж/Д билеты</div>
+              </a>
+              <a href="javascript://" class="nav-item" data-bs-toggle="modal" data-bs-target="#createTicket">
+                <div class="nav-link">Отели</div>
+              </a>
+              <a href="javascript://" class="nav-item" data-bs-toggle="modal" data-bs-target="#createTicket">
+                <div class="nav-link">Трансферы</div>
+              </a>
+              <a href="javascript://" class="nav-item" data-bs-toggle="modal" data-bs-target="#createTicket">
+                <div class="nav-link">ЯндексGO</div>
+              </a>
+              <a href="javascript://" class="nav-item" data-bs-toggle="modal" data-bs-target="#createTicket">
+                <div class="nav-link">Аэроэкпресс</div>
+              </a>
+              <a href="javascript://" class="nav-item" data-bs-toggle="modal" data-bs-target="#createTicket">
+                <div class="nav-link">Свободный заказ</div>
+              </a>
+              <a href="javascript://" class="nav-item" data-bs-toggle="modal" data-bs-target="#createTicket">
+                <div class="nav-link">Доп услуги</div>
+              </a>
+              <a href="javascript://" class="nav-item" data-bs-toggle="modal" data-bs-target="#createTicket">
+                <div class="nav-link">Ноутбуки и автомобили</div>
+              </a>
+              <a href="javascript://" class="nav-item" data-bs-toggle="modal" data-bs-target="#createTicket">
+                <div class="nav-link">Командировка</div>
+              </a>
+              <a href="javascript://" class="nav-item" data-bs-toggle="modal" data-bs-target="#createTicket">
+                <div class="nav-link">Заявка</div>
+              </a>
+            </nav>
+          </div>
+          <!-- header filters -->
+          <div class="col-12">
+            <div class="header-bottom">
+              <div class="header-bottom-left">
+                <div class="filters" data-bs-toggle="collapse" data-bs-target="#filters" aria-expanded="false"
+                  aria-controls="filters">
+                  123
+                </div>
+              </div>
+              <div class="header-bottom-right">456</div>
+              <div class="header-filters">
+                <div class="collapse" id="filters">
+                  <form class="form form-header form-header-filters g-4" action="?">
+                    <div class="form-col">
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
-            <div class="col">Menu</div>
-            <div class="col-auto">
-              <a
-                href="javascript://"
-                class="btn btn-light"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-                >ooo</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <!-- header -->
-
-    <!-- content -->
-    <main class="content">
-      <section>
-        <div class="container">
-          <div class="card">
-            <div class="card-body">
-              <div class="card-title">Hello, world!</div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <!-- content -->
-
-    <!-- footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-inner">
-          <div class="row g-3">
-            <div class="col-auto">Logo</div>
-            <div class="col">Nav</div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- footer -->
-
-    <!-- modals -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
     </div>
+  </header>
+  <!-- header -->
 
-    <!-- modals -->
+  <!-- content -->
+  <main class="content">
+    <section>
+      <div class="container">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-title">Hello, world!</div>
+            <div class="row g-3">
+              <div class="col-auto">
+                <button type="button" class="btn btn-primary">rrerf</button>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-outline-primary">rrerf</button>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-success">rrerf</button>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-danger">rrerf</button>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-warning">rrerf</button>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-white">rrerf</button>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-dark">rrerf</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- content -->
 
-    <!-- scripts -->
-    <script type="module" src="/assets/js/app.js"></script>
-    <!-- scripts -->
-  </body>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="row g-3">
+          <div class="col-auto">Logo</div>
+          <div class="col">Nav</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer -->
+
+  <!-- modals -->
+  <div class="modal fade" id="createTicket" tabindex="-1" aria-labelledby="createTicketLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-title fs-4 fw-bold">
+          Вы действительно хотите создать командировку?
+        </div>
+        <div class="modal-body">...</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modals -->
+
+  <!-- scripts -->
+  <script type="module" src="/assets/js/app.js"></script>
+  <!-- scripts -->
+</body>
+
 </html>

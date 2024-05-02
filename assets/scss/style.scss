@@ -1,11 +1,31 @@
-// vendor
-@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-
 // utilities
 @import "./utilities/container";
+@import "./utilities/colors";
+
+// vendor
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// theme
 @import "./utilities/theme";
+
+// components
+@import "./components/cursor";
+@import "./components/fonts";
+@import "./components/icon";
+@import "./components/preloader";
 
 // layouts
 @import "./layouts/header";
 @import "./layouts/footer";
 @import "./layouts/nav";
+
+html {
+    display: none;
+}
+
+.content {
+    position: relative;
+    padding: calc(var(--content-padding-y) * 2) 0;
+}
