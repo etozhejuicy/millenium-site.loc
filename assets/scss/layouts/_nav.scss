@@ -6,8 +6,11 @@
     --header-nav-link-color: var(--bs-dark);
     --header-nav-link-hover-color: var(--bs-link-color);
     --header-nav-link-disabled-color: var(--bs-secondary-color);
-    --header-services-item-gap-x: 1rem;
-    --header-services-item-gap-y: 0.5rem;
+    --header-services-gap-x: 1rem;
+    --header-services-gap-y: 0.5rem;
+    --header-services-item-gap-x: 0.313rem;
+    --header-services-item-gap-y: 0.313rem;
+    --header-services-padding-y: 1rem;
     --header-services-item-font-weight: 400;
     --header-services-item-font-size: 0.875rem;
     --header-services-icon-color: var(--bs-link-color);
@@ -16,7 +19,7 @@
     --header-services-item-disabled-color: var(--bs-secondary-color);
     @media (min-width: 1200px) {
         --header-nav-link-gap-x: 3.125rem;
-        --header-services-item-gap-x: 1.625rem;
+        --header-services-gap-x: 1.625rem;
     }
 }
 
@@ -66,29 +69,33 @@
 .nav {
     &-services {
         display: flex;
-        flex-wrap: wrap;
-        row-gap: var(--header-services-item-gap-y);
-        column-gap: var(--header-services-item-gap-x);
-        padding-left: 0;
+        flex-wrap: nowrap;
+        row-gap: var(--header-services-gap-y);
+        column-gap: var(--header-services-gap-x);
+        padding: calc(var(--header-services-padding-y) / 5) 0 var(--header-services-padding-y);
         margin-bottom: 0;
         list-style: none;
-        &-icon {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            width: 1.625rem;
-            height: 1.625rem;
-            color: var(--header-services-icon-color);
-            & > * {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-            }
+        overflow-x: auto;
+        scrollbar-width: thin;
+        scrollbar-color: var(--bs-grey) var(--bs-body-bg);
+        &::-webkit-scrollbar {
+            width: 0.875rem;
+        }
+        &::-webkit-scrollbar-track {
+            background: var(--bs-body-bg);
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--bs-grey);
+            border-radius: 50rem;
+            border: 0.25rem solid var(--bs-body-bg);
         }
         &-item {
             display: flex;
             flex-direction: column;
             align-items: center;
+            flex: 1 0 auto;
+            row-gap: var(--header-services-item-gap-y);
+            column-gap: var(--header-services-item-gap-x);
             font-size: var(--header-services-item-font-size);
             font-weight: var(--header-services-item-font-weight);
             color: var(--header-services-item-color);
@@ -115,6 +122,19 @@
                 color: var(--header-services-item-disabled-color);
                 pointer-events: none;
                 cursor: default;
+            }
+        }
+        &-icon {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            width: 1.625rem;
+            height: 0.875rem;
+            color: var(--header-services-icon-color);
+            & > * {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
             }
         }
     }
