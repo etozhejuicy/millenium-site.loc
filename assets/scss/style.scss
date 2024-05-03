@@ -1,18 +1,22 @@
 // utilities
 @import "./utilities/container";
 @import "./utilities/colors";
-
-// components
-@import "./components/cursor";
-@import "./components/fonts";
-@import "./components/icon";
-@import "./components/modal";
-@import "./components/preloader";
+@import "./utilities/variables";
 
 // vendor
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+// components
+@import "./components/cards";
+@import "./components/cursor";
+@import "./components/filters";
+@import "./components/fonts";
+@import "./components/icon";
+@import "./components/modal";
+@import "./components/orders";
+@import "./components/preloader";
 
 // theme
 @import "./utilities/theme";

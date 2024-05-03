@@ -1,6 +1,7 @@
 :root {
-  --bs-font-sans-serif: "SF UI Display", "Helvetica Neue", "Segoe UI", "Roboto",
-    Arial, sans-serif;
+  --bs-font-sans-serif: "SF UI Display", "Helvetica Neue", "Segoe UI", "Roboto", Arial, sans-serif;
+  --bs-body-font-size: 0.875rem;
+  --bs-body-line-height: 1.5;
   --bs-body-bg: #edeff5;
   --bs-body-color: #222a37;
   --bs-body-color-rgb: 34, 42, 55;
@@ -16,10 +17,13 @@
 
   --bs-dropdown-item-font-weight: 400;
 
+  --bs-form-font-size: 0.75rem;
+
   --content-padding-y: 1.875rem;
 
   // buttons default config
   .btn {
+    --bs-btn-font-size: 0.875rem;
     &-primary {
       --bs-btn-color: var(--bs-white);
       --bs-btn-hover-color: var(--bs-white);
@@ -44,6 +48,10 @@
         --bs-btn-active-color: var(--bs-white);
       }
     }
+    &-wider {
+      --bs-btn-padding-y: 0.938rem;
+      --bs-btn-padding-x: 3.125rem;
+    }
   }
 
   // card default config
@@ -58,9 +66,7 @@
     --bs-card-border-color: var(--bs-border-color-translucent);
     --bs-card-border-radius: var(--bs-border-radius);
     --bs-card-box-shadow: ;
-    --bs-card-inner-border-radius: calc(
-      var(--bs-border-radius) - (var(--bs-border-width))
-    );
+    --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
     --bs-card-cap-padding-y: 0.5rem;
     --bs-card-cap-padding-x: 1rem;
     --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
@@ -75,6 +81,12 @@
   // dropdown default config
   .dropdown-item {
     font-weight: var(--bs-dropdown-item-font-weight);
+  }
+
+  // form-control
+  .form-control {
+    font-size: $input-font-size;
+    padding: ($input-padding-y + 0.125rem) ($input-padding-x + 0.125rem);
   }
 }
 

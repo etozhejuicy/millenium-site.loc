@@ -1,0 +1,42 @@
+:root {
+    --order-table-gap: 1.563rem;
+    --order-table-body-gap: 0.625rem;
+    --order-table-item-gap: 0.625rem;
+}
+
+.order {
+    &-table {
+        display: flex;
+        flex-direction: column;
+        row-gap: var(--order-table-gap);
+        column-gap: var(--order-table-gap);
+        &-header {
+            display: none;
+            @media (min-width: 992px) {
+                display: block;
+            }
+            & > .row {
+                --bs-gutter-x: 1.5rem;
+                --bs-gutter-y: 1.5rem;
+            }
+        }
+        &-body {
+            display: flex;
+            flex-direction: column;
+            row-gap: var(--order-table-body-gap);
+            column-gap: var(--order-table-body-gap);
+        }
+        &-item {
+            display: flex;
+            flex-direction: column;
+            row-gap: var(--order-table-item-gap);
+            column-gap: var(--order-table-item-gap);
+            @media (min-width: 992px) {
+                flex-direction: row;
+            }
+        }
+        &-info {
+            flex: 1 0 auto;
+        }
+    }
+}
