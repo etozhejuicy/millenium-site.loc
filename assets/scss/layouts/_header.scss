@@ -5,7 +5,7 @@
   --header-shadow-color: rgba(0, 0, 0, 0.05);
   --header-font-size: 1rem;
   --header-line-height: 100%;
-  --header-font-weight: 300;
+  --header-font-weight: 400;
 }
 
 .header {
@@ -20,6 +20,7 @@
   &-logo {
     position: relative;
     z-index: 1;
+    display: flex;
     width: 11.438rem;
     height: 2.484rem;
     & > * {

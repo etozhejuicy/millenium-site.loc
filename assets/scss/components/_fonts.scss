@@ -25,6 +25,14 @@
 @font-face {
     font-family: sf ui display;
     font-style: normal;
+    font-weight: 400;
+    src:
+        local("SF UI Display"),
+        url(./assets/fonts/sf-ui-display-light-58646b33e0551.woff) format("woff");
+}
+@font-face {
+    font-family: sf ui display;
+    font-style: normal;
     font-weight: 500;
     src:
         local("SF UI Display"),

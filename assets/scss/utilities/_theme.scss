@@ -1,24 +1,44 @@
 :root {
-  --bs-font-sans-serif: "SF UI Display", sans-serif;
+  --bs-font-sans-serif: "SF UI Display", "Helvetica Neue", "Segoe UI", "Roboto", Arial, sans-serif;
   --bs-body-bg: #edeff5;
   --bs-body-color: #222a37;
   --bs-body-color-rgb: 34, 42, 55;
+  --bs-body-font-weight: 400;
 
-  --bs-blue: #009fd6 !important;
-  --bs-primary: #009fd6 !important;
-  --bs-primary-rgb: 0, 159, 214 !important;
+  --bs-blue: #009fd6;
+  --bs-primary: #009fd6;
+  --bs-primary-rgb: 0, 159, 214;
+  --bs-dark: #222a37;
+  --bs-dark-rgb: 34, 42, 55;
+  --bs-grey: #7a869a;
+  --bs-grey-rgb: 122, 134, 154;
+
+  --bs-dropdown-item-font-weight: 400;
 
   --content-padding-y: 1.875rem;
 
-  // buttons
+  // buttons default config
   .btn {
     &-primary {
       --bs-btn-color: var(--bs-white);
       --bs-btn-hover-color: var(--bs-white);
       --bs-btn-active-color: var(--bs-white);
     }
+    &-grey {
+      --bs-btn-color: var(--bs-grey);
+      --bs-btn-bg: var(--bs-body-bg);
+      --bs-btn-border-color: var(--bs-body-bg);
+      --bs-btn-hover-color: var(--bs-body-bg);
+      --bs-btn-hover-bg: #{shade-color($grey, 10%)};
+      --bs-btn-hover-border-color: #{shade-color($grey, 10%)};
+      --bs-btn-focus-shadow-rgb: var(--bs-grey-rgb);
+      --bs-btn-active-color: var(--bs-btn-hover-color);
+      --bs-btn-active-bg: #{shade-color($grey, 20%)};
+      --bs-btn-active-border-color: #{shade-color($grey, 20%)};
+    }
     &-outline {
       &-primary {
+        --bs-btn-bg-color: var(--bs-body-bg);
         --bs-btn-hover-color: var(--bs-white);
         --bs-btn-active-color: var(--bs-white);
       }
@@ -48,4 +68,15 @@
     --bs-card-img-overlay-padding: 1rem;
     --bs-card-group-margin: 0.75rem;
   }
+
+  // dropdown default config
+  .dropdown-item {
+    font-weight: var(--bs-dropdown-item-font-weight);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }

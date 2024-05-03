@@ -10,14 +10,15 @@
 <body>
   <!-- header -->
   <header class="header">
-    <div class="header-inner">
-      <div class="container">
+    <div class="container">
+      <div class="header-inner">
         <div class="row g-3">
+          <!-- header top info -->
           <div class="col-12">
             <div class="header-top">
               <div class="header-top-left">
                 <div class="header-operating-mode">
-                  <div class="text-secondary">Круглосуточно</div>
+                  <div class="text-muted">Круглосуточно</div>
                 </div>
                 <div class="header-contacts">
                   <div class="header-contacts-item">
@@ -91,47 +92,126 @@
               </div>
             </div>
           </div>
+          <div class="col-12">
+            <hr class="hr" />
+          </div>
           <!-- header logo -->
-          <div class="col-auto">
+          <div class="col">
             <a href="/" class="header-logo">
               <img src="/assets/images/logo.svg" />
             </a>
           </div>
           <!-- header nav -->
-          <div class="col">
-            <nav class="nav">
-              <a href="javascript://" class="nav-item" data-bs-toggle="modal" data-bs-target="#createTicket">
-                <div class="nav-link">Авиабилеты</div>
+          <div class="col-auto align-self-center">
+            <nav class="header-nav">
+              <a class="header-nav-link active" href="#">Все заказы</a>
+              <a class="header-nav-link" href="#">Календарь командировок</a>
+              <a class="header-nav-link" href="#">Групповая заявка</a>
+              <a class="header-nav-link" href="#">Пассажиры</a>
+              <a class="header-nav-link" href="#">Мой профиль</a>
+            </nav>
+          </div>
+          <!-- header ticket-menu -->
+          <div class="col-12">
+            <nav class="nav-services">
+              <a href="javascript://" class="nav-services-item" data-bs-toggle="modal" data-bs-target="#createTicket">
+                <div class="nav-services-icon">
+                  <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                    focusable="false">
+                    <use xlink:href="./assets/sprite.svg#airplane"></use>
+                  </svg>
+                </div>
+                <div class="nav-services-text">Авиабилеты</div>
               </a>
-              <a href="javascript://" class="nav-item" data-bs-toggle="modal" data-bs-target="#createTicket">
-                <div class="nav-link">Ж/Д билеты</div>
+              <a href="javascript://" class="nav-services-item" data-bs-toggle="modal" data-bs-target="#createTicket">
+                <div class="nav-services-icon">
+                  <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                    focusable="false">
+                    <use xlink:href="./assets/sprite.svg#train"></use>
+                  </svg>
+                </div>
+                <div class="nav-services-text">Ж/Д билеты</div>
               </a>
-              <a href="javascript://" class="nav-item" data-bs-toggle="modal" data-bs-target="#createTicket">
-                <div class="nav-link">Отели</div>
+              <a href="javascript://" class="nav-services-item" data-bs-toggle="modal" data-bs-target="#createTicket">
+                <div class="nav-services-icon">
+                  <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                    focusable="false">
+                    <use xlink:href="./assets/sprite.svg#hotel"></use>
+                  </svg>
+                </div>
+                <div class="nav-services-text">Отели</div>
               </a>
-              <a href="javascript://" class="nav-item" data-bs-toggle="modal" data-bs-target="#createTicket">
-                <div class="nav-link">Трансферы</div>
+              <a href="javascript://" class="nav-services-item" data-bs-toggle="modal" data-bs-target="#createTicket">
+                <div class="nav-services-icon">
+                  <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                    focusable="false">
+                    <use xlink:href="./assets/sprite.svg#car"></use>
+                  </svg>
+                </div>
+                <div class="nav-services-text">Трансферы</div>
               </a>
-              <a href="javascript://" class="nav-item" data-bs-toggle="modal" data-bs-target="#createTicket">
-                <div class="nav-link">ЯндексGO</div>
+              <a href="javascript://" class="nav-services-item" data-bs-toggle="modal" data-bs-target="#createTicket">
+                <div class="nav-services-icon">
+                  <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                    focusable="false">
+                    <use xlink:href="./assets/sprite.svg#yago"></use>
+                  </svg>
+                </div>
+                <div class="nav-services-text">ЯндексGO</div>
               </a>
-              <a href="javascript://" class="nav-item" data-bs-toggle="modal" data-bs-target="#createTicket">
-                <div class="nav-link">Аэроэкпресс</div>
+              <a href="javascript://" class="nav-services-item" data-bs-toggle="modal" data-bs-target="#createTicket">
+                <div class="nav-services-icon">
+                  <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                    focusable="false">
+                    <use xlink:href="./assets/sprite.svg#aeroexpress"></use>
+                  </svg>
+                </div>
+                <div class="nav-services-text">Аэроэкпресс</div>
               </a>
-              <a href="javascript://" class="nav-item" data-bs-toggle="modal" data-bs-target="#createTicket">
-                <div class="nav-link">Свободный заказ</div>
+              <a href="javascript://" class="nav-services-item" data-bs-toggle="modal" data-bs-target="#createTicket">
+                <div class="nav-services-icon">
+                  <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                    focusable="false">
+                    <use xlink:href="./assets/sprite.svg#freeorder"></use>
+                  </svg>
+                </div>
+                <div class="nav-services-text">Свободный заказ</div>
               </a>
-              <a href="javascript://" class="nav-item" data-bs-toggle="modal" data-bs-target="#createTicket">
-                <div class="nav-link">Доп услуги</div>
+              <a href="javascript://" class="nav-services-item" data-bs-toggle="modal" data-bs-target="#createTicket">
+                <div class="nav-services-icon">
+                  <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                    focusable="false">
+                    <use xlink:href="./assets/sprite.svg#additional"></use>
+                  </svg>
+                </div>
+                <div class="nav-services-text">Доп услуги</div>
               </a>
-              <a href="javascript://" class="nav-item" data-bs-toggle="modal" data-bs-target="#createTicket">
-                <div class="nav-link">Ноутбуки и автомобили</div>
+              <a href="javascript://" class="nav-services-item" data-bs-toggle="modal" data-bs-target="#createTicket">
+                <div class="nav-services-icon">
+                  <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                    focusable="false">
+                    <use xlink:href="./assets/sprite.svg#autonotebooks"></use>
+                  </svg>
+                </div>
+                <div class="nav-services-text">Ноутбуки и автомобили</div>
               </a>
-              <a href="javascript://" class="nav-item" data-bs-toggle="modal" data-bs-target="#createTicket">
-                <div class="nav-link">Командировка</div>
+              <a href="javascript://" class="nav-services-item" data-bs-toggle="modal" data-bs-target="#createTicket">
+                <div class="nav-services-icon">
+                  <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                    focusable="false">
+                    <use xlink:href="./assets/sprite.svg#trip"></use>
+                  </svg>
+                </div>
+                <div class="nav-services-text">Командировка</div>
               </a>
-              <a href="javascript://" class="nav-item" data-bs-toggle="modal" data-bs-target="#createTicket">
-                <div class="nav-link">Заявка</div>
+              <a href="javascript://" class="nav-services-item" data-bs-toggle="modal" data-bs-target="#createTicket">
+                <div class="nav-services-icon">
+                  <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                    focusable="false">
+                    <use xlink:href="./assets/sprite.svg#application"></use>
+                  </svg>
+                </div>
+                <div class="nav-services-text">Заявка</div>
               </a>
             </nav>
           </div>
@@ -176,25 +256,13 @@
             <div class="card-title">Hello, world!</div>
             <div class="row g-3">
               <div class="col-auto">
-                <button type="button" class="btn btn-primary">rrerf</button>
+                <button type="button" class="btn btn-primary">Primary</button>
               </div>
               <div class="col-auto">
-                <button type="button" class="btn btn-outline-primary">rrerf</button>
+                <button type="button" class="btn btn-outline-primary">Primary Outline</button>
               </div>
               <div class="col-auto">
-                <button type="button" class="btn btn-success">rrerf</button>
-              </div>
-              <div class="col-auto">
-                <button type="button" class="btn btn-danger">rrerf</button>
-              </div>
-              <div class="col-auto">
-                <button type="button" class="btn btn-warning">rrerf</button>
-              </div>
-              <div class="col-auto">
-                <button type="button" class="btn btn-white">rrerf</button>
-              </div>
-              <div class="col-auto">
-                <button type="button" class="btn btn-dark">rrerf</button>
+                <button type="button" class="btn btn-grey">Custom button</button>
               </div>
             </div>
           </div>

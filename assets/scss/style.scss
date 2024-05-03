@@ -2,6 +2,13 @@
 @import "./utilities/container";
 @import "./utilities/colors";
 
+// components
+@import "./components/cursor";
+@import "./components/fonts";
+@import "./components/icon";
+@import "./components/modal";
+@import "./components/preloader";
+
 // vendor
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
@@ -9,12 +16,6 @@
 
 // theme
 @import "./utilities/theme";
-
-// components
-@import "./components/cursor";
-@import "./components/fonts";
-@import "./components/icon";
-@import "./components/preloader";
 
 // layouts
 @import "./layouts/header";
