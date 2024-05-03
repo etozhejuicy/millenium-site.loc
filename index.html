@@ -1,313 +1,532 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Millennium - demo</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Millennium - demo</title>
-</head>
-
-<body>
-  <!-- header -->
-  <header class="header">
-    <div class="container">
-      <div class="header-inner">
-        <div class="row g-3">
-          <!-- header top info -->
-          <div class="col-12">
-            <div class="header-top">
-              <div class="header-top-left">
-                <div class="header-operating-mode">
-                  <div class="text-muted">Круглосуточно</div>
-                </div>
-                <div class="header-contacts">
-                  <div class="header-contacts-item">
-                    Москва, Санкт-Петербург и регионы РФ:
-                    <a class="header-contacts-link" href="tel:8 (495) 138 16 16">8 (495) 138 16 16</a>
-                  </div>
-                  <div class="header-contacts-item">
-                    Казань:
-                    <a class="header-contacts-link" href="tel:8 (843) 208 66 36">8 (843) 208 66 36</a>
-                  </div>
-                  <div class="header-contacts-item">
-                    Самара:
-                    <a class="header-contacts-link" href="tel:8 (846) 300 26 06">8 (846) 300 26 06</a>
-                  </div>
-                </div>
-              </div>
-              <div class="header-top-right">
-                <div class="row align-items-center">
-                  <div class="col">
-                    <div class="header-profile cursor-pointer" data-bs-toggle="dropdown" aria-expanded="false">
-                      <div class="header-profile-avatar">
-                        <img data-src="/assets/images/file.jpg" class="lazyload" />
-                      </div>
-                      <div class="header-profile-info">
-                        <div class="header-profile-name">
-                          Мануйлова Юлия Алексеевна-Спиридоновна
-                        </div>
-                        <div class="header-profile-company">
-                          (Тест компании ООО)
-                        </div>
-                      </div>
-                    </div>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Профиль</a></li>
-                      <li><a class="dropdown-item" href="#">Настройки</a></li>
-                      <li>
-                        <hr class="dropdown-divider">
-                      </li>
-                      <li><a class="dropdown-item" href="#">Выход</a></li>
-                    </ul>
-                  </div>
-                  <div class="col-auto">
-                    <div class="header-top-nav dropend">
-                      <span class="icon cursor-pointer" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="/assets/images/lang/rus.svg" language-icon />
-                      </span>
-                      <ul class="dropdown-menu" language-list>
-                        <li>
-                          <input name="language" id="rus_lang" value="rus" type="radio" checked hidden />
-                          <label class="dropdown-item cursor-pointer" href="#" for="rus_lang">
-                            Рус.
-                          </label>
-                        </li>
-                        <li>
-                          <input name="language" id="eng_lang" value="eng" type="radio" hidden />
-                          <label class="dropdown-item cursor-pointer" href="#" for="eng_lang">
-                            Eng.
-                          </label>
-                        </li>
-                      </ul>
-
-                      <span class="icon cursor-pointer">
-                        <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg"
-                          aria-hidden="true" focusable="false">
-                          <use xlink:href="./assets/sprite.svg#exit"></use>
-                        </svg>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12">
-            <hr class="hr" />
-          </div>
-          <!-- header logo -->
-          <div class="col">
-            <a href="/" class="header-logo">
-              <img src="/assets/images/logo.svg" />
-            </a>
-          </div>
-          <!-- header nav -->
-          <div class="col-auto align-self-center">
-            <nav class="header-nav">
-              <a class="header-nav-link active" href="#">Все заказы</a>
-              <a class="header-nav-link" href="#">Календарь командировок</a>
-              <a class="header-nav-link" href="#">Групповая заявка</a>
-              <a class="header-nav-link" href="#">Пассажиры</a>
-              <a class="header-nav-link" href="#">Мой профиль</a>
-            </nav>
-          </div>
-          <!-- header ticket-menu -->
-          <div class="col-12">
-            <nav class="nav-services">
-              <a href="javascript://" class="nav-services-item" data-bs-toggle="modal" data-bs-target="#createTicket">
-                <div class="nav-services-icon">
-                  <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
-                    focusable="false">
-                    <use xlink:href="./assets/sprite.svg#airplane"></use>
-                  </svg>
-                </div>
-                <div class="nav-services-text">Авиабилеты</div>
-              </a>
-              <a href="javascript://" class="nav-services-item" data-bs-toggle="modal" data-bs-target="#createTicket">
-                <div class="nav-services-icon">
-                  <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
-                    focusable="false">
-                    <use xlink:href="./assets/sprite.svg#train"></use>
-                  </svg>
-                </div>
-                <div class="nav-services-text">Ж/Д билеты</div>
-              </a>
-              <a href="javascript://" class="nav-services-item" data-bs-toggle="modal" data-bs-target="#createTicket">
-                <div class="nav-services-icon">
-                  <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
-                    focusable="false">
-                    <use xlink:href="./assets/sprite.svg#hotel"></use>
-                  </svg>
-                </div>
-                <div class="nav-services-text">Отели</div>
-              </a>
-              <a href="javascript://" class="nav-services-item" data-bs-toggle="modal" data-bs-target="#createTicket">
-                <div class="nav-services-icon">
-                  <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
-                    focusable="false">
-                    <use xlink:href="./assets/sprite.svg#car"></use>
-                  </svg>
-                </div>
-                <div class="nav-services-text">Трансферы</div>
-              </a>
-              <a href="javascript://" class="nav-services-item" data-bs-toggle="modal" data-bs-target="#createTicket">
-                <div class="nav-services-icon">
-                  <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
-                    focusable="false">
-                    <use xlink:href="./assets/sprite.svg#yago"></use>
-                  </svg>
-                </div>
-                <div class="nav-services-text">ЯндексGO</div>
-              </a>
-              <a href="javascript://" class="nav-services-item" data-bs-toggle="modal" data-bs-target="#createTicket">
-                <div class="nav-services-icon">
-                  <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
-                    focusable="false">
-                    <use xlink:href="./assets/sprite.svg#aeroexpress"></use>
-                  </svg>
-                </div>
-                <div class="nav-services-text">Аэроэкпресс</div>
-              </a>
-              <a href="javascript://" class="nav-services-item" data-bs-toggle="modal" data-bs-target="#createTicket">
-                <div class="nav-services-icon">
-                  <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
-                    focusable="false">
-                    <use xlink:href="./assets/sprite.svg#freeorder"></use>
-                  </svg>
-                </div>
-                <div class="nav-services-text">Свободный заказ</div>
-              </a>
-              <a href="javascript://" class="nav-services-item" data-bs-toggle="modal" data-bs-target="#createTicket">
-                <div class="nav-services-icon">
-                  <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
-                    focusable="false">
-                    <use xlink:href="./assets/sprite.svg#additional"></use>
-                  </svg>
-                </div>
-                <div class="nav-services-text">Доп услуги</div>
-              </a>
-              <a href="javascript://" class="nav-services-item" data-bs-toggle="modal" data-bs-target="#createTicket">
-                <div class="nav-services-icon">
-                  <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
-                    focusable="false">
-                    <use xlink:href="./assets/sprite.svg#autonotebooks"></use>
-                  </svg>
-                </div>
-                <div class="nav-services-text">Ноутбуки и автомобили</div>
-              </a>
-              <a href="javascript://" class="nav-services-item" data-bs-toggle="modal" data-bs-target="#createTicket">
-                <div class="nav-services-icon">
-                  <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
-                    focusable="false">
-                    <use xlink:href="./assets/sprite.svg#trip"></use>
-                  </svg>
-                </div>
-                <div class="nav-services-text">Командировка</div>
-              </a>
-              <a href="javascript://" class="nav-services-item" data-bs-toggle="modal" data-bs-target="#createTicket">
-                <div class="nav-services-icon">
-                  <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
-                    focusable="false">
-                    <use xlink:href="./assets/sprite.svg#application"></use>
-                  </svg>
-                </div>
-                <div class="nav-services-text">Заявка</div>
-              </a>
-            </nav>
-          </div>
-          <!-- header filters -->
-          <div class="col-12">
-            <div class="header-bottom">
-              <div class="header-bottom-left">
-                <div class="filters" data-bs-toggle="collapse" data-bs-target="#filters" aria-expanded="false"
-                  aria-controls="filters">
-                  123
-                </div>
-              </div>
-              <div class="header-bottom-right">456</div>
-              <div class="header-filters">
-                <div class="collapse" id="filters">
-                  <form class="form form-header form-header-filters g-4" action="?">
-                    <div class="form-col">
-                      <select class="form-select" aria-label="Default select example">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- header -->
-
-  <!-- content -->
-  <main class="content">
-    <section>
+  <body>
+    <!-- header -->
+    <header class="header">
       <div class="container">
-        <div class="card">
-          <div class="card-body">
-            <div class="card-title">Hello, world!</div>
-            <div class="row g-3">
-              <div class="col-auto">
-                <button type="button" class="btn btn-primary">Primary</button>
+        <div class="header-inner">
+          <div class="row g-3">
+            <!-- header top info -->
+            <div class="col-12">
+              <div class="header-top">
+                <div class="header-top-left">
+                  <div class="header-operating-mode">
+                    <div class="text-muted">Круглосуточно</div>
+                  </div>
+                  <div class="header-contacts">
+                    <div class="header-contacts-item">
+                      Москва, Санкт-Петербург и регионы РФ:
+                      <a
+                        class="header-contacts-link"
+                        href="tel:8 (495) 138 16 16"
+                        >8 (495) 138 16 16</a
+                      >
+                    </div>
+                    <div class="header-contacts-item">
+                      Казань:
+                      <a
+                        class="header-contacts-link"
+                        href="tel:8 (843) 208 66 36"
+                        >8 (843) 208 66 36</a
+                      >
+                    </div>
+                    <div class="header-contacts-item">
+                      Самара:
+                      <a
+                        class="header-contacts-link"
+                        href="tel:8 (846) 300 26 06"
+                        >8 (846) 300 26 06</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="header-top-right">
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <div
+                        class="header-profile cursor-pointer"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <div class="header-profile-avatar">
+                          <img
+                            data-src="/assets/images/file.jpg"
+                            class="lazyload"
+                          />
+                        </div>
+                        <div class="header-profile-info">
+                          <div class="header-profile-name">
+                            Мануйлова Юлия Алексеевна-Спиридоновна
+                          </div>
+                          <div class="header-profile-company">
+                            (Тест компании ООО)
+                          </div>
+                        </div>
+                      </div>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Профиль</a></li>
+                        <li><a class="dropdown-item" href="#">Настройки</a></li>
+                        <li>
+                          <hr class="dropdown-divider" />
+                        </li>
+                        <li><a class="dropdown-item" href="#">Выход</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-auto">
+                      <div class="header-top-nav dropend">
+                        <div class="choose-lang">
+                          <span
+                            class="icon cursor-pointer"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <img
+                              src="/assets/images/lang/rus.svg"
+                              language-icon
+                            />
+                          </span>
+                          <ul class="dropdown-menu" language-list>
+                            <li>
+                              <input
+                                name="language"
+                                id="rus_lang"
+                                value="rus"
+                                type="radio"
+                                checked
+                                hidden
+                              />
+                              <label
+                                class="dropdown-item cursor-pointer"
+                                href="#"
+                                for="rus_lang"
+                              >
+                                Рус.
+                              </label>
+                            </li>
+                            <li>
+                              <input
+                                name="language"
+                                id="eng_lang"
+                                value="eng"
+                                type="radio"
+                                hidden
+                              />
+                              <label
+                                class="dropdown-item cursor-pointer"
+                                href="#"
+                                for="eng_lang"
+                              >
+                                Eng.
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="account-actions">
+                          <span class="icon cursor-pointer">
+                            <svg
+                              width="100%"
+                              height="100%"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                              aria-hidden="true"
+                              focusable="false"
+                            >
+                              <use xlink:href="./assets/sprite.svg#exit"></use>
+                            </svg>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="col-auto">
-                <button type="button" class="btn btn-outline-primary">Primary Outline</button>
-              </div>
-              <div class="col-auto">
-                <button type="button" class="btn btn-grey">Custom button</button>
+            </div>
+            <div class="col-12">
+              <hr class="hr" />
+            </div>
+            <!-- header logo -->
+            <div class="col">
+              <a href="/" class="header-logo">
+                <img src="/assets/images/logo.svg" />
+              </a>
+            </div>
+            <!-- header nav -->
+            <div class="col-auto align-self-center">
+              <nav class="header-nav">
+                <a class="header-nav-link active" href="#">Все заказы</a>
+                <a class="header-nav-link" href="#">Календарь командировок</a>
+                <a class="header-nav-link" href="#">Групповая заявка</a>
+                <a class="header-nav-link" href="#">Пассажиры</a>
+                <a class="header-nav-link" href="#">Мой профиль</a>
+              </nav>
+            </div>
+            <!-- header ticket-menu -->
+            <div class="col-12">
+              <nav class="nav-services">
+                <a
+                  href="javascript://"
+                  class="nav-services-item"
+                  data-bs-toggle="modal"
+                  data-bs-target="#createTicket"
+                >
+                  <div class="nav-services-icon">
+                    <svg
+                      width="100%"
+                      height="100%"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use xlink:href="./assets/sprite.svg#airplane"></use>
+                    </svg>
+                  </div>
+                  <div class="nav-services-text">Авиабилеты</div>
+                </a>
+                <a
+                  href="javascript://"
+                  class="nav-services-item"
+                  data-bs-toggle="modal"
+                  data-bs-target="#createTicket"
+                >
+                  <div class="nav-services-icon">
+                    <svg
+                      width="100%"
+                      height="100%"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use xlink:href="./assets/sprite.svg#train"></use>
+                    </svg>
+                  </div>
+                  <div class="nav-services-text">Ж/Д билеты</div>
+                </a>
+                <a
+                  href="javascript://"
+                  class="nav-services-item"
+                  data-bs-toggle="modal"
+                  data-bs-target="#createTicket"
+                >
+                  <div class="nav-services-icon">
+                    <svg
+                      width="100%"
+                      height="100%"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use xlink:href="./assets/sprite.svg#hotel"></use>
+                    </svg>
+                  </div>
+                  <div class="nav-services-text">Отели</div>
+                </a>
+                <a
+                  href="javascript://"
+                  class="nav-services-item"
+                  data-bs-toggle="modal"
+                  data-bs-target="#createTicket"
+                >
+                  <div class="nav-services-icon">
+                    <svg
+                      width="100%"
+                      height="100%"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use xlink:href="./assets/sprite.svg#car"></use>
+                    </svg>
+                  </div>
+                  <div class="nav-services-text">Трансферы</div>
+                </a>
+                <a
+                  href="javascript://"
+                  class="nav-services-item"
+                  data-bs-toggle="modal"
+                  data-bs-target="#createTicket"
+                >
+                  <div class="nav-services-icon">
+                    <svg
+                      width="100%"
+                      height="100%"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use xlink:href="./assets/sprite.svg#yago"></use>
+                    </svg>
+                  </div>
+                  <div class="nav-services-text">ЯндексGO</div>
+                </a>
+                <a
+                  href="javascript://"
+                  class="nav-services-item"
+                  data-bs-toggle="modal"
+                  data-bs-target="#createTicket"
+                >
+                  <div class="nav-services-icon">
+                    <svg
+                      width="100%"
+                      height="100%"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use xlink:href="./assets/sprite.svg#aeroexpress"></use>
+                    </svg>
+                  </div>
+                  <div class="nav-services-text">Аэроэкпресс</div>
+                </a>
+                <a
+                  href="javascript://"
+                  class="nav-services-item"
+                  data-bs-toggle="modal"
+                  data-bs-target="#createTicket"
+                >
+                  <div class="nav-services-icon">
+                    <svg
+                      width="100%"
+                      height="100%"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use xlink:href="./assets/sprite.svg#freeorder"></use>
+                    </svg>
+                  </div>
+                  <div class="nav-services-text">Свободный заказ</div>
+                </a>
+                <a
+                  href="javascript://"
+                  class="nav-services-item"
+                  data-bs-toggle="modal"
+                  data-bs-target="#createTicket"
+                >
+                  <div class="nav-services-icon">
+                    <svg
+                      width="100%"
+                      height="100%"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use xlink:href="./assets/sprite.svg#additional"></use>
+                    </svg>
+                  </div>
+                  <div class="nav-services-text">Доп услуги</div>
+                </a>
+                <a
+                  href="javascript://"
+                  class="nav-services-item"
+                  data-bs-toggle="modal"
+                  data-bs-target="#createTicket"
+                >
+                  <div class="nav-services-icon">
+                    <svg
+                      width="100%"
+                      height="100%"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use xlink:href="./assets/sprite.svg#autonotebooks"></use>
+                    </svg>
+                  </div>
+                  <div class="nav-services-text">Ноутбуки и автомобили</div>
+                </a>
+                <a
+                  href="javascript://"
+                  class="nav-services-item"
+                  data-bs-toggle="modal"
+                  data-bs-target="#createTicket"
+                >
+                  <div class="nav-services-icon">
+                    <svg
+                      width="100%"
+                      height="100%"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use xlink:href="./assets/sprite.svg#trip"></use>
+                    </svg>
+                  </div>
+                  <div class="nav-services-text">Командировка</div>
+                </a>
+                <a
+                  href="javascript://"
+                  class="nav-services-item"
+                  data-bs-toggle="modal"
+                  data-bs-target="#createTicket"
+                >
+                  <div class="nav-services-icon">
+                    <svg
+                      width="100%"
+                      height="100%"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use xlink:href="./assets/sprite.svg#application"></use>
+                    </svg>
+                  </div>
+                  <div class="nav-services-text">Заявка</div>
+                </a>
+              </nav>
+            </div>
+            <!-- header filters -->
+            <div class="col-12">
+              <div class="header-filters">
+                <div class="header-filters-toggler">
+                  <!-- toggle collapse filters -->
+                  <input
+                    type="text"
+                    class="form-control dropdown-toggle w-100"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#filters"
+                    aria-expanded="false"
+                    aria-controls="filters"
+                    value="Фильтры"
+                    readonly
+                  />
+                </div>
+                <div class="header-filters-info">
+                  <span class="icon">
+                    <svg
+                      width="100%"
+                      height="100%"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use xlink:href="./assets/sprite.svg#info"></use>
+                    </svg>
+                  </span>
+                  Уважаемый сотрудник Газпром нефть Шельф! Просим ознакомиться с
+                  памяткой по направлению на производственные объекты.
+                  <a href="#download" class="link" download="">скачать</a>
+                </div>
+                <div class="header-filters-body">
+                  <div class="collapse" id="filters">
+                    <form
+                      class="form form-header form-header-filters g-4"
+                      action="?"
+                    >
+                      <div class="form-col">
+                        <select
+                          class="form-select"
+                          aria-label="Default select example"
+                        >
+                          <option selected>Open this select menu</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                    </form>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  </main>
-  <!-- content -->
+    </header>
+    <!-- header -->
 
-  <!-- footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div class="row g-3">
-          <div class="col-auto">Logo</div>
-          <div class="col">Nav</div>
+    <!-- content -->
+    <main class="content">
+      <section>
+        <div class="container">
+          <div class="card">
+            <div class="card-body">
+              <div class="card-title">Hello, world!</div>
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button type="button" class="btn btn-primary">Primary</button>
+                </div>
+                <div class="col-auto">
+                  <button type="button" class="btn btn-outline-primary">
+                    Primary Outline
+                  </button>
+                </div>
+                <div class="col-auto">
+                  <button type="button" class="btn btn-grey">
+                    Custom button
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- content -->
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="row g-3">
+            <div class="col-auto">Logo</div>
+            <div class="col">Nav</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer -->
+
+    <!-- modals -->
+    <div
+      class="modal fade"
+      id="createTicket"
+      tabindex="-1"
+      aria-labelledby="createTicketLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-title fs-4 fw-bold">
+            Вы действительно хотите создать командировку?
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
         </div>
       </div>
     </div>
-  </footer>
-  <!-- footer -->
 
-  <!-- modals -->
-  <div class="modal fade" id="createTicket" tabindex="-1" aria-labelledby="createTicketLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-title fs-4 fw-bold">
-          Вы действительно хотите создать командировку?
-        </div>
-        <div class="modal-body">...</div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-            Close
-          </button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
+    <!-- modals -->
 
-  <!-- modals -->
-
-  <!-- scripts -->
-  <script type="module" src="/assets/js/app.js"></script>
-  <!-- scripts -->
-</body>
-
+    <!-- scripts -->
+    <script type="module" src="/assets/js/app.js"></script>
+    <!-- scripts -->
+  </body>
 </html>

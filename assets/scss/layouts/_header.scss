@@ -31,11 +31,14 @@
   }
   &-top {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 1.5rem;
     column-gap: 1.5rem;
+    @media (min-width: 992px) {
+      flex-direction: row;
+    }
     &-left {
       display: flex;
       flex-direction: column;
@@ -43,12 +46,20 @@
       row-gap: 0.438rem;
       column-gap: 0.438rem;
       flex: 0 1 auto;
+      @media (min-width: 992px) {
+        flex-grow: 1;
+        flex-basis: 50%;
+      }
     }
     &-right {
+      // width: 100%;
+      @media (min-width: 992px) {
+        flex-grow: 1;
+      }
       & > .row {
         --bs-gutter-x: 0.75rem;
         --bs-gutter-y: 0.75rem;
-        @media (min-width: 768px) {
+        @media (min-width: 1200px) {
           --bs-gutter-x: 5.188rem;
         }
       }
@@ -57,8 +68,8 @@
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      row-gap: 0.438rem;
-      column-gap: 0.438rem;
+      row-gap: 0.938rem;
+      column-gap: 0.938rem;
     }
   }
   &-operating {
@@ -127,6 +138,34 @@
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
+    }
+  }
+  &-filters {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 1.875rem;
+    column-gap: 1.625rem;
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+    &-toggler {
+      width: 100%;
+      @media (min-width: 768px) {
+        width: 14.625rem;
+      }
+    }
+    &-info {
+      width: 100%;
+      @media (min-width: 768px) {
+        flex-grow: 5;
+        width: 80%;
+      }
+    }
+    &-body {
+      flex: 1 0 auto;
+      width: 100%;
     }
   }
 }
