@@ -678,7 +678,8 @@
             </div>
             <div class="order-table-body">
               <!-- Карточка заказа -->
-              <div class="order-table-item">
+              <!-- Если заказ в архиве, то присваиваем к .order-table-item .order-disabled -->
+              <div class="order-table-item order-ordered">
                 <div class="order-table-info">
                   <div class="card order-card">
                     <div class="card-body">
@@ -770,9 +771,23 @@
                   </div>
                 </div>
                 <div class="order-table-status">
-                  <div class="card">
+                  <div class="card order-card-status">
                     <div class="card-body">
-                      <div class="order-col-status">Статусы</div>
+                      <div class="order-col-status">
+                        <!-- статус заказа -->
+                        <div class="order-status">
+                          <!-- 
+                            Иконка статуса заказа регулируется в .order-table-item при помощи селекторов, например: .order-status-success;
+                            Есть четыре статуса заказа:
+                            .order-status-success
+                            .order-status-disabled
+                            .order-status-process
+                            .order-status-ordered
+                          -->
+                          <div class="order-status-icon"></div>
+                          <div class="order-status-value">Выполнен</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

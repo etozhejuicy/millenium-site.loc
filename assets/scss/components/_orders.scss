@@ -9,6 +9,8 @@
   --order-item-col-gap: 0.625rem;
   --order-item-icon-size: 1.875rem;
   --order-table-min-font-size: 0.75rem;
+  --order-status-gap: 0.656rem;
+  --order-status-icon-size: 1.844rem;
 }
 
 .order {
@@ -130,25 +132,6 @@
       flex: 1 0 auto;
     }
   }
-  // disabled item
-  &-disabled {
-    pointer-events: none;
-    user-select: none;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      width: 100%;
-      height: 100%;
-    }
-    & * {
-      pointer-events: none;
-      user-select: none;
-      color: var(--bs-grey) !important;
-    }
-  }
   // card config
   &-card {
     &-table {
@@ -175,6 +158,18 @@
         }
       }
     }
+    &-status {
+      min-height: 100%;
+      & .card-body {
+        display: flex;
+        flex-direction: column;
+      }
+      & .order-col-status {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+    }
   }
   // mobile config
   &-mobile {
@@ -199,5 +194,66 @@
   }
   &-archive {
     font-size: var(--order-table-min-font-size);
+  }
+  // statuses config
+  &-status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: var(--order-status-gap);
+    column-gap: var(--order-status-gap);
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    color: var(--bs-primary);
+    &-icon {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      width: var(--order-status-icon-size);
+      height: var(--order-status-icon-size);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      overflow: hidden;
+    }
+  }
+  // status types
+  &-success {
+    & .order-status-icon {
+      background-image: url("/assets/images/order/status/success.svg");
+    }
+  }
+  &-ordered {
+    & .order-status-icon {
+      background-image: url("/assets/images/order/status/ordered.svg");
+    }
+  }
+  &-process {
+    & .order-status-icon {
+      background-image: url("/assets/images/order/status/process.svg");
+    }
+  }
+  &-disabled {
+    pointer-events: none;
+    user-select: none;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+    }
+    & * {
+      pointer-events: none;
+      user-select: none;
+      color: var(--bs-grey) !important;
+    }
+    & .order-status-icon {
+      background-image: url("/assets/images/order/status/disabled.svg");
+    }
   }
 }
