@@ -1,2 +1,31 @@
 // rewrite variables
 $modal-fade-transform: scale(2) !default;
+
+.modal {
+    --bs-modal-bg: var(--bs-white);
+    --bs-modal-width: 48.438rem;
+    --bs-border-radius: 0.313rem;
+    --modal-title-font-weight: 500;
+    --modal-title-font-size: 1.25rem;
+    --bs-modal-title-padding: 1.75rem;
+    --bs-actions-padding: 2.188rem;
+    @media (min-width: 768px) {
+        --bs-modal-padding: 2.5rem;
+    }
+    &-title {
+        font-weight: var(--modal-title-font-weight);
+        font-size: var(--modal-title-font-size);
+        padding-bottom: var(--bs-modal-title-padding);
+    }
+    &-actions {
+        width: 100%;
+        flex: 1 1 auto;
+        padding-left: var(--#{$prefix}modal-padding);
+        padding-right: var(--#{$prefix}modal-padding);
+        padding-bottom: var(--#{$prefix}modal-padding);
+        & > .row {
+            --bs-gutter-x: 0.938rem;
+            --bs-gutter-y: 2.125rem;
+        }
+    }
+}

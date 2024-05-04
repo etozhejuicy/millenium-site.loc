@@ -61,7 +61,6 @@
             & [class^="order-col"] {
                 font-size: var(--order-table-header-font-size);
                 color: var(--order-table-header-color);
-                padding: 0 var(--order-item-col-gap);
             }
         }
         &-left {
@@ -101,6 +100,7 @@
             }
             & .order-col {
                 &-type {
+                    padding: 0;
                     & > .icon {
                         color: var(--bs-primary);
                         width: var(--order-item-icon-size);
@@ -134,6 +134,24 @@
             & > .row {
                 --bs-gutter-x: var(--order-item-col-gap);
                 --bs-gutter-y: var(--order-item-col-gap);
+                & > [class^="col"] {
+                    position: relative;
+                    @media (min-width: 1200px) {
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            right: calc(0% - (var(--order-item-col-gap) / 2));
+                            width: 0.0625px;
+                            height: 100%;
+                            border-right: 0.0625rem dashed var(--bs-grey);
+                        }
+                        &:last-of-type {
+                            &::before {
+                                display: none;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

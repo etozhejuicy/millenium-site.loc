@@ -1,0 +1,33 @@
+// buttons default config
+.btn {
+    --bs-btn-font-size: 0.875rem;
+    --bs-btn-line-height: 1;
+    &-primary {
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-active-color: var(--bs-white);
+    }
+    &-grey {
+        --bs-btn-color: var(--bs-grey);
+        --bs-btn-bg: var(--bs-body-bg);
+        --bs-btn-border-color: var(--bs-body-bg);
+        --bs-btn-hover-color: var(--bs-body-bg);
+        --bs-btn-hover-bg: #{shade-color($grey, 10%)};
+        --bs-btn-hover-border-color: #{shade-color($grey, 10%)};
+        --bs-btn-focus-shadow-rgb: var(--bs-grey-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #{shade-color($grey, 20%)};
+        --bs-btn-active-border-color: #{shade-color($grey, 20%)};
+    }
+    &-outline {
+        &-primary {
+            background-color: rgba(var(--bs-primary-rgb), 0.045);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-active-color: var(--bs-white);
+        }
+    }
+    &-wider {
+        --bs-btn-padding-y: 0.938rem;
+        --bs-btn-padding-x: 3.125rem;
+    }
+}
