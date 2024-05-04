@@ -1,5 +1,5 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    document.documentElement.style.setProperty('display', 'block');
+document.addEventListener("DOMContentLoaded", (event) => {
+  document.documentElement.style.setProperty("display", "block");
 });
 
 // init jquery
@@ -15,3 +15,5 @@ import "bootstrap";
 
 // modules
 import "./components/lang";
+import "./components/preloader";
+import "./modules/selectize";

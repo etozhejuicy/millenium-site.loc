@@ -1,0 +1,181 @@
+:root {
+  --preloader-zindex: 3000;
+  --preloader-background-color: var(--bs-primary);
+  --preloader-text-color: var(--bs-white);
+  --preloader-circle-outer-size: 44.71rem;
+  --preloader-circle-inner-size: 30.156rem;
+  --preloader-circle-core-size: 10.959rem;
+  --preloader-point-size: 0.75rem;
+  --preloader-title-font-size: 1.25rem;
+  --preloader-text-font-size: 0.75rem;
+  --preloader-title-line-height: 100%;
+  --preloader-text-line-height: 110%;
+  @media (min-width: 1200px) {
+    --preloader-title-font-size: 2.813rem;
+    --preloader-text-font-size: 1.813rem;
+  }
+}
+
+body {
+  &:is(.preloader-is-active) {
+    & .header,
+    & .content,
+    & .footer {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+    & .preloader {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &:not(.preloader-is-active) {
+    & .header,
+    & .content,
+    & .footer {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+    & .preloader {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--preloader-zindex);
+  width: 100%;
+  height: 100%;
+  max-height: 100svh;
+  background-color: var(--preloader-background-color);
+  color: var(--preloader-text-color);
+  pointer-events: all;
+  user-select: none;
+  overflow: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+  &-is {
+    &-active {
+      position: static;
+      top: 0;
+      left: 0;
+      touch-action: none;
+      overflow: hidden;
+    }
+  }
+  & > .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    @media (min-width: 1200px) {
+      flex-direction: row;
+      align-items: stretch;
+    }
+  }
+  &-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 100%;
+    @media (min-width: 1200px) {
+      align-items: flex-start;
+    }
+  }
+  &-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 100%;
+  }
+  &-link {
+    flex: 1;
+  }
+  &-title {
+    font-size: var(--preloader-title-font-size);
+    line-height: var(--preloader-title-line-height);
+  }
+  &-text {
+    font-size: var(--preloader-text-font-size);
+    line-height: var(--preloader-text-line-height);
+  }
+  &-logo {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 8.634rem;
+    height: 1.875rem;
+    color: var(--bs-white);
+    @media (min-width: 1200px) {
+      width: 12.688rem;
+      height: 2.755rem;
+      bottom: -5rem;
+    }
+  }
+  &-animation {
+    &-container {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: var(--preloader-circle-outer-size);
+      height: var(--preloader-circle-outer-size);
+      & > .preloader-circle {
+        &:nth-child(1) {
+          width: var(--preloader-circle-outer-size);
+          height: var(--preloader-circle-outer-size);
+        }
+        &:nth-child(2) {
+          width: var(--preloader-circle-inner-size);
+          height: var(--preloader-circle-inner-size);
+        }
+        &:nth-child(3) {
+          width: var(--preloader-circle-core-size);
+          height: var(--preloader-circle-core-size);
+        }
+      }
+    }
+  }
+  &-circle {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    border: 0.0625rem solid var(--preloader-text-color);
+  }
+  &-point {
+    position: relative;
+    display: flex;
+    width: var(--preloader-point-size);
+    height: var(--preloader-point-size);
+    top: calc(
+      -1 * ((var(--preloader-circle-inner-size) / 2) -
+            (var(--preloader-point-size) / 2))
+    );
+    border-radius: 100%;
+    background-color: var(--preloader-text-color);
+    transform-origin: calc(var(--preloader-point-size) / 2)
+      calc(var(--preloader-circle-inner-size) / 2);
+    transform: rotate(0deg);
+  }
+}
