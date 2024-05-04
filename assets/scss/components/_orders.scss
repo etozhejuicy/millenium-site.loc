@@ -8,6 +8,7 @@
     --order-item-gap: 0.625rem;
     --order-item-col-gap: 0.625rem;
     --order-item-icon-size: 1.875rem;
+    --order-table-min-font-size: 0.75rem;
 }
 
 .order {
@@ -44,6 +45,7 @@
             }
         }
     }
+    // table config
     &-table {
         display: flex;
         flex-direction: column;
@@ -93,6 +95,9 @@
             }
             & [class^="order-col"] {
                 padding: 0 var(--order-item-col-gap);
+                & p {
+                    margin: unset;
+                }
             }
             & .order-col {
                 &-type {
@@ -105,6 +110,18 @@
                 &-date {
                     width: 100%;
                     min-width: 3.5rem;
+                }
+                &-info {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 0.938rem;
+                    column-gap: 0.938rem;
+                }
+                &-passenger {
+                    padding-top: 2.251rem;
+                }
+                &-agent {
+                    padding-top: 2.251rem;
                 }
             }
         }
@@ -119,5 +136,16 @@
                 --bs-gutter-y: var(--order-item-col-gap);
             }
         }
+    }
+    &-customer {
+        color: var(--bs-grey);
+        font-size: var(--order-table-min-font-size);
+    }
+    &-payer {
+        color: var(--bs-grey);
+        font-size: var(--order-table-min-font-size);
+    }
+    &-archive {
+        font-size: var(--order-table-min-font-size);
     }
 }
