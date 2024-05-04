@@ -1,10 +1,49 @@
 :root {
     --order-table-gap: 1.563rem;
+    --order-table-header-padding: 1rem;
+    --order-table-header-gap: 0.625rem;
+    --order-table-header-font-size: 0.75rem;
+    --order-table-header-color: var(--bs-grey);
     --order-table-body-gap: 0.625rem;
-    --order-table-item-gap: 0.625rem;
+    --order-item-gap: 0.625rem;
+    --order-item-col-gap: 0.625rem;
+    --order-item-icon-size: 1.875rem;
 }
 
 .order {
+    // size of columns table
+    &-col {
+        &-type {
+            @media (min-width: 1200px) {
+                width: 1.875rem;
+            }
+        }
+        &-date {
+            @media (min-width: 1200px) {
+                width: 3.5rem;
+            }
+        }
+        &-info {
+            flex: 1 0 auto;
+            @media (min-width: 1200px) {
+                width: 31.875rem;
+            }
+        }
+        &-passenger {
+            @media (min-width: 1200px) {
+                width: 10.313rem;
+            }
+        }
+        &-status {
+            text-align: center;
+            @media (min-width: 1200px) {
+                width: 6.188rem;
+            }
+            & > .card {
+                height: 100%;
+            }
+        }
+    }
     &-table {
         display: flex;
         flex-direction: column;
@@ -12,12 +51,30 @@
         column-gap: var(--order-table-gap);
         &-header {
             display: none;
-            @media (min-width: 992px) {
-                display: block;
+            @media (min-width: 1200px) {
+                display: flex;
+                row-gap: var(--order-item-gap);
+                column-gap: var(--order-item-gap);
             }
+            & [class^="order-col"] {
+                font-size: var(--order-table-header-font-size);
+                color: var(--order-table-header-color);
+                padding: 0 var(--order-item-col-gap);
+            }
+        }
+        &-left {
+            flex: 1 0 auto;
+            padding: var(--order-table-header-padding);
             & > .row {
-                --bs-gutter-x: 1.5rem;
-                --bs-gutter-y: 1.5rem;
+                --bs-gutter-x: var(--order-table-header-gap);
+                --bs-gutter-y: var(--order-table-header-gap);
+            }
+        }
+        &-right {
+            padding: var(--order-table-header-padding);
+            & > .row {
+                --bs-gutter-x: var(--order-table-header-gap);
+                --bs-gutter-y: var(--order-table-header-gap);
             }
         }
         &-body {
@@ -29,14 +86,38 @@
         &-item {
             display: flex;
             flex-direction: column;
-            row-gap: var(--order-table-item-gap);
-            column-gap: var(--order-table-item-gap);
-            @media (min-width: 992px) {
+            row-gap: var(--order-item-gap);
+            column-gap: var(--order-item-gap);
+            @media (min-width: 1200px) {
                 flex-direction: row;
+            }
+            & [class^="order-col"] {
+                padding: 0 var(--order-item-col-gap);
+            }
+            & .order-col {
+                &-type {
+                    & > .icon {
+                        color: var(--bs-primary);
+                        width: var(--order-item-icon-size);
+                        height: var(--order-item-icon-size);
+                    }
+                }
+                &-date {
+                    width: 100%;
+                    min-width: 3.5rem;
+                }
             }
         }
         &-info {
             flex: 1 0 auto;
+        }
+    }
+    &-card {
+        &-table {
+            & > .row {
+                --bs-gutter-x: var(--order-item-col-gap);
+                --bs-gutter-y: var(--order-item-col-gap);
+            }
         }
     }
 }
