@@ -2,7 +2,7 @@
     --footer-padding-y: 1.875rem;
     --footer-padding-x: 0;
     --footer-gap-y: 1.875rem;
-    --footer-gap-x: 2rem;
+    --footer-gap-x: 12rem;
     --footer-background-color: var(--bs-white);
     --footer-content-gap-y: 1.875rem;
     --footer-content-gap-x: 6.813rem;
@@ -10,6 +10,7 @@
     --footer-navigation-gap-y: 1.625rem;
     --footer-contacts-gap: 0.875rem;
     --footer-partners-gap: 2.266rem;
+    --footer-other-gap: 2.652rem;
 }
 
 .footer {
@@ -64,12 +65,24 @@
             width: 17.875rem;
         }
     }
-    &-partners {
+    &-other {
+        display: flex;
         flex-direction: row;
+        align-items: center;
+        row-gap: var(--footer-other-gap);
+        column-gap: var(--footer-other-gap);
         @media (min-width: 1200px) {
             flex-direction: column;
+            align-items: flex-end;
         }
+    }
+    &-partners {
         & > .row {
+            flex-direction: row;
+            @media (min-width: 1200px) {
+                flex-direction: column;
+                align-items: flex-end;
+            }
             --bs-gutter-x: var(--footer-partners-gap);
             --bs-gutter-y: var(--footer-partners-gap);
         }
