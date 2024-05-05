@@ -1,19 +1,21 @@
-.container {
-  width: 100%;
-  max-width: 100%;
-  @media (min-width: 576px) {
-    max-width: calc(33.75rem + (var(--bs-gutter-x) / 2) * 2);
-  }
-  @media (min-width: 768px) {
-    max-width: calc(45rem + (var(--bs-gutter-x) / 2) * 2);
-  }
-  @media (min-width: 992px) {
-    max-width: calc(60rem + (var(--bs-gutter-x) / 2) * 2);
-  }
-  @media (min-width: 1200px) {
-    max-width: calc(74.625rem + (var(--bs-gutter-x) / 2) * 2);
-  }
-  @media (min-width: 1440px) {
-    max-width: calc(74.625rem + (var(--bs-gutter-x) / 2) * 2);
+:root {
+  .container {
+    width: 100%;
+    max-width: 100%;
+    @media (min-width: 576px) {
+      max-width: calc(33.75rem + (var(--bs-gutter-x) / 2) * 2);
+    }
+    @media (min-width: 768px) {
+      max-width: calc(45rem + (var(--bs-gutter-x) / 2) * 2);
+    }
+    @media (min-width: 992px) {
+      max-width: calc(60rem + (var(--bs-gutter-x) / 2) * 2);
+    }
+    @media (min-width: 1200px) {
+      max-width: calc(74.625rem + (var(--bs-gutter-x) / 2) * 2);
+    }
+    @media (min-width: 1440px) {
+      max-width: calc(74.625rem + (var(--bs-gutter-x) / 2) * 2);
+    }
   }
 }

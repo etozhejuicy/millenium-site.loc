@@ -29,6 +29,32 @@
 @import "./layouts/footer";
 @import "./layouts/nav";
 
+// responsive design
+// :root {
+//   font-size: calc(100vw / 375 * 14);
+//   @media (min-width: 576px) {
+//     font-size: calc(100vw / 400 * 14);
+//   }
+//   @media (min-width: 768px) {
+//     font-size: calc(100vw / 768 * 14);
+//   }
+//   @media (min-width: 992px) {
+//     font-size: calc(100vw / 992 * 14);
+//   }
+//   @media (min-width: 1200px) {
+//     font-size: calc(100vw / 1440 * 14);
+//   }
+//   @media (min-width: 1440px) {
+//     font-size: calc(100vw / 1440 * 14);
+//   }
+//   @media (min-width: 1600px) {
+//     font-size: calc(100vw / 1440 * 14);
+//   }
+//   @media (min-width: 1920px) {
+//     font-size: calc(100vw / 1600 * 14);
+//   }
+// }
+
 html {
   display: none;
 }
