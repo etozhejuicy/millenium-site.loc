@@ -1,0 +1,78 @@
+:root {
+  .pagination {
+    --bs-pagination-font-size: var(--bs-body-font-size);
+    --pagination-arrow-size: 2.5rem;
+    --pagination-item-border-radius: 100%;
+    --pagination-item-gap: 1.438rem;
+    --bs-pagination-bg: transparent;
+    --bs-pagination-border-width: 0.0625rem;
+    --bs-pagination-border-color: transparent;
+    --bs-pagination-border-radius: var(--pagination-item-border-radius);
+    --bs-pagination-hover-color: var(--bs-primary);
+    --bs-pagination-hover-bg: transparent;
+    --bs-pagination-hover-border-color: transparent;
+    --bs-pagination-focus-color: var(--bs-link-hover-color);
+    --bs-pagination-focus-bg: transparent;
+    --bs-pagination-focus-box-shadow: none;
+
+    --bs-pagination-color: var(--bs-grey);
+    --bs-pagination-active-color: var(--bs-primary);
+    --bs-pagination-active-bg: transparent;
+    --bs-pagination-active-border-color: transparent;
+    --bs-pagination-disabled-bg: transparent;
+    --bs-pagination-disabled-border-color: transparent;
+    border-radius: var(--pagination-item-border-radius);
+    &-arrow {
+      --bs-pagination-color: var(--bs-grey);
+      --bs-pagination-border-color: var(--bs-grey);
+      --bs-pagination-hover-color: var(--bs-primary);
+      --bs-pagination-hover-bg: transparent;
+      --bs-pagination-hover-border-color: var(--bs-primary);
+      --bs-pagination-focus-color: var(--bs-white);
+      --bs-pagination-focus-bg: var(--bs-primary);
+      --bs-pagination-focus-box-shadow: none;
+      --bs-pagination-active-color: var(--bs-white);
+      --bs-pagination-active-bg: var(--bs-primary);
+      --bs-pagination-active-border-color: var(--bs-primary);
+      &:disabled,
+      &.disabled {
+        --bs-pagination-border-color: var(--bs-grey);
+        --bs-pagination-hover-border-color: var(--bs-primary);
+        --bs-pagination-focus-border-color: var(--bs-primary);
+        --bs-pagination-active-border-color: var(--bs-primary);
+        --bs-pagination-disabled-bg: transparent;
+        --bs-pagination-disabled-border-color: var(--bs-grey);
+        opacity: 0.5;
+      }
+      & > .page-link {
+        width: var(--pagination-arrow-size);
+        height: var(--pagination-arrow-size);
+        border-top-left-radius: var(--pagination-item-border-radius);
+        border-bottom-left-radius: var(--pagination-item-border-radius);
+        border-top-right-radius: var(--pagination-item-border-radius);
+        border-bottom-right-radius: var(--pagination-item-border-radius);
+      }
+    }
+  }
+
+  .page-item:last-child .page-link {
+    margin-left: var(--pagination-item-gap);
+  }
+
+  .page-item:first-child .page-link {
+    margin-right: var(--pagination-item-gap);
+  }
+
+  .page-item:not(:first-child) .page-link,
+  .page-item:not(.last-child) .page-link {
+    padding-left: calc(var(--pagination-item-gap) / 2);
+    padding-right: calc(var(--pagination-item-gap) / 2);
+  }
+
+  .page-item {
+    &:active,
+    &.active {
+      font-weight: 500;
+    }
+  }
+}

@@ -14,11 +14,13 @@
 @import "./components/buttons";
 @import "./components/cards";
 @import "./components/cursor";
+@import "./components/dropdown";
 @import "./components/filters";
 @import "./components/fonts";
 @import "./components/icon";
 @import "./components/modal";
 @import "./components/orders";
+@import "./components/pagination";
 @import "./components/preloader";
 @import "./components/selectize";
 
@@ -67,4 +69,8 @@ html {
 .content {
   position: relative;
   padding: calc(var(--content-padding-y) * 2) 0;
+}
+
+.section-pagination {
+  padding-top: 1.25rem;
 }

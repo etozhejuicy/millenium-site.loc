@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", (event) => {
   document.documentElement.style.setProperty("display", "block");
+  document.querySelector(".preloader").style.setProperty("display", "block");
 });
 
 // init jquery

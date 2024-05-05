@@ -1,0 +1,9 @@
+:root {
+  .dropdown-menu {
+    --bs-dropdown-bg: var(--bs-white);
+  }
+
+  .dropdown-item {
+    font-weight: var(--bs-dropdown-item-font-weight);
+  }
+}
