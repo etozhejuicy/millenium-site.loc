@@ -1,4 +1,4 @@
-var preloader = $("preloader");
+var preloader = $(".preloader");
 
 class Preloader {
   constructor() {
@@ -14,14 +14,10 @@ class Preloader {
       setTimeout(() => {
         $("body").removeClass("preloader-is-active");
         setTimeout(() => {
-          this.removeObject();
+          preloader.remove();
         }, 1000);
       }, 5000);
     }
-  }
-
-  removeObject() {
-    preloader.remove();
   }
 }
 

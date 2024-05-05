@@ -1,0 +1,77 @@
+:root {
+    --footer-padding-y: 1.875rem;
+    --footer-padding-x: 0;
+    --footer-gap-y: 1.875rem;
+    --footer-gap-x: 2rem;
+    --footer-background-color: var(--bs-white);
+    --footer-content-gap-y: 1.875rem;
+    --footer-content-gap-x: 6.813rem;
+    --footer-info-gap-y: 2rem;
+    --footer-navigation-gap-y: 1.625rem;
+    --footer-contacts-gap: 0.875rem;
+    --footer-partners-gap: 2.266rem;
+}
+
+.footer {
+    position: relative;
+    z-index: 1;
+    padding: calc(var(--footer-padding-y) + 0.625rem) var(--footer-padding-x) var(--footer-padding-y);
+    background-color: var(--footer-background-color);
+    overflow: hidden;
+    &-inner {
+        & > .row {
+            --bs-gutter-y: var(--footer-gap-y);
+            --bs-gutter-x: var(--footer-gap-x);
+        }
+    }
+    &-content {
+        & > .row {
+            --bs-gutter-y: var(--footer-content-gap-y);
+            --bs-gutter-x: var(--footer-content-gap-x);
+        }
+    }
+    &-info {
+        & > .row {
+            --bs-gutter-y: var(--footer-content-gap-y);
+        }
+    }
+    &-contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: var(--footer-contacts-gap);
+        column-gap: var(--footer-contacts-gap);
+        @media (min-width: 768px) {
+            width: 17.875rem;
+        }
+    }
+    &-navigation {
+        @media (min-width: 768px) {
+            width: 17.875rem;
+        }
+        & > .row {
+            --bs-gutter-y: var(--footer-content-gap-y);
+            flex-direction: column;
+        }
+    }
+    &-copyrite {
+        @media (min-width: 768px) {
+            width: 17.875rem;
+        }
+    }
+    &-author {
+        @media (min-width: 768px) {
+            width: 17.875rem;
+        }
+    }
+    &-partners {
+        flex-direction: row;
+        @media (min-width: 1200px) {
+            flex-direction: column;
+        }
+        & > .row {
+            --bs-gutter-x: var(--footer-partners-gap);
+            --bs-gutter-y: var(--footer-partners-gap);
+        }
+    }
+}

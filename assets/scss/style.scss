@@ -66,9 +66,19 @@ html {
   display: none;
 }
 
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: clip;
+}
+
 .content {
   position: relative;
-  padding: calc(var(--content-padding-y) * 2) 0;
+  flex: 1;
+  padding: var(--content-padding-y) 0 calc(var(--content-padding-y) * 2);
 }
 
 .section-pagination {

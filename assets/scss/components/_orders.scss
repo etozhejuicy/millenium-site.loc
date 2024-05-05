@@ -30,13 +30,16 @@
     &-date {
       @media (min-width: 1200px) {
         // width: 3.5rem;
-        width: 4.15rem;
+        width: 4.65rem;
+      }
+      @media (min-width: 1400px) {
+        width: 4.85rem;
       }
     }
     &-info {
       flex: 1 0 auto;
       @media (min-width: 1200px) {
-        width: 27.875rem;
+        width: 28.875rem;
       }
       @media (min-width: 1400px) {
         width: 31.875rem;
@@ -45,6 +48,9 @@
     &-passenger {
       @media (min-width: 1200px) {
         width: 10.313rem;
+      }
+      @media (min-width: 1400px) {
+        width: 12.313rem;
       }
     }
     &-status {
@@ -81,16 +87,14 @@
     }
     &-left {
       flex: 1 0 auto;
-      padding: var(--order-table-header-padding-y)
-        var(--order-table-header-padding-x);
+      padding: var(--order-table-header-padding-y) var(--order-table-header-padding-x);
       & > .row {
         --bs-gutter-x: var(--order-table-header-gap);
         --bs-gutter-y: var(--order-table-header-gap);
       }
     }
     &-right {
-      padding: var(--order-table-header-padding-y)
-        var(--order-table-header-padding-x);
+      padding: var(--order-table-header-padding-y) var(--order-table-header-padding-x);
       & > .row {
         --bs-gutter-x: var(--order-table-header-gap);
         --bs-gutter-y: var(--order-table-header-gap);

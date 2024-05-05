@@ -56,11 +56,11 @@
   }
 
   .page-item:last-child .page-link {
-    margin-left: var(--pagination-item-gap);
+    margin-left: calc(var(--pagination-item-gap) / 2);
   }
 
   .page-item:first-child .page-link {
-    margin-right: var(--pagination-item-gap);
+    margin-right: calc(var(--pagination-item-gap) / 2);
   }
 
   .page-item:not(:first-child) .page-link,
