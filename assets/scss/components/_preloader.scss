@@ -1,16 +1,32 @@
 :root {
   --preloader-zindex: 3000;
+  --preloader-padding-x: 0;
+  --preloader-padding-y: 2.188rem;
   --preloader-background-color: var(--bs-primary);
   --preloader-text-color: var(--bs-white);
-  --preloader-circle-outer-size: 44.71rem;
-  --preloader-circle-inner-size: 30.156rem;
-  --preloader-circle-core-size: 10.959rem;
-  --preloader-point-size: 0.75rem;
+  --preloader-circle-outer-size: 15.271rem;
+  --preloader-circle-inner-size: 10.3rem;
+  --preloader-circle-core-size: 3.743rem;
+  --preloader-point-size: 0.326rem;
+  --preloader-logo-width: 8.634rem;
+  --preloader-logo-height: 1.875rem;
   --preloader-title-font-size: 1.25rem;
   --preloader-text-font-size: 0.75rem;
   --preloader-title-line-height: 100%;
   --preloader-text-line-height: 110%;
+  @media (min-width: 768px) {
+    --preloader-padding-y: 2.938rem;
+    --preloader-circle-outer-size: 34.71rem;
+    --preloader-circle-inner-size: 20.156rem;
+    --preloader-circle-core-size: 7.5959rem;
+    --preloader-point-size: 0.75rem;
+  }
   @media (min-width: 1200px) {
+    --preloader-circle-outer-size: 44.71rem;
+    --preloader-circle-inner-size: 30.156rem;
+    --preloader-circle-core-size: 10.959rem;
+    --preloader-logo-width: 12.688rem;
+    --preloader-logo-height: 2.755rem;
     --preloader-title-font-size: 2.813rem;
     --preloader-text-font-size: 1.813rem;
   }
@@ -53,6 +69,7 @@ body {
   width: 100%;
   height: 100%;
   max-height: 100svh;
+  padding: var(--preloader-padding-y) var(--preloader-padding-x);
   background-color: var(--preloader-background-color);
   color: var(--preloader-text-color);
   pointer-events: all;
@@ -76,7 +93,7 @@ body {
   }
   &-inner {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
     flex: 1;
@@ -102,12 +119,22 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     min-height: 100%;
+    & > .preloader-logo {
+      display: flex;
+      @media (min-width: 1200px) {
+        display: none;
+      }
+    }
   }
   &-link {
+    display: none;
     flex: 1;
+    @media (min-width: 1200px) {
+      display: block;
+    }
   }
   &-title {
     font-size: var(--preloader-title-font-size);
@@ -121,16 +148,23 @@ body {
     position: relative;
     z-index: 1;
     display: flex;
-    width: 8.634rem;
-    height: 1.875rem;
+    width: var(--preloader-logo-width);
+    height: var(--preloader-logo-height);
     color: var(--bs-white);
-    @media (min-width: 1200px) {
-      width: 12.688rem;
-      height: 2.755rem;
-      bottom: -5rem;
-    }
   }
   &-animation {
+    position: relative;
+    z-index: 1;
+    &-logo {
+      position: absolute;
+      top: var(--preloader-logo-height);
+      left: 50%;
+      display: none;
+      transform: translate(-50%, 0);
+      @media (min-width: 1200px) {
+        display: flex;
+      }
+    }
     &-container {
       position: relative;
       z-index: 1;
@@ -168,14 +202,20 @@ body {
     display: flex;
     width: var(--preloader-point-size);
     height: var(--preloader-point-size);
-    top: calc(
-      -1 * ((var(--preloader-circle-inner-size) / 2) -
-            (var(--preloader-point-size) / 2))
-    );
+    top: calc(-1 * (var(--preloader-circle-inner-size) / 2));
     border-radius: 100%;
     background-color: var(--preloader-text-color);
-    transform-origin: calc(var(--preloader-point-size) / 2)
-      calc(var(--preloader-circle-inner-size) / 2);
+    animation-name: preloaderPointRotation;
+    animation-timing-function: linear;
+    animation-duration: 13s;
+    animation-fill-mode: backwards;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    transform-origin: 50%
+      calc(
+        (var(--preloader-circle-inner-size) / 2) +
+          (var(--preloader-point-size) / 2)
+      );
     transform: rotate(0deg);
   }
 }

@@ -12,10 +12,10 @@ class Preloader {
   init() {
     if ($("preloader-is-active")) {
       setTimeout(() => {
-        $("body").removeClass("preloader-is-active");
-        setTimeout(() => {
-          this.removeObject();
-        }, 1000);
+        // $("body").removeClass("preloader-is-active");
+        // setTimeout(() => {
+        //   this.removeObject();
+        // }, 1000);
       }, 5000);
     }
   }

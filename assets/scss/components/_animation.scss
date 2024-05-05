@@ -19,3 +19,9 @@
     visibility: hidden;
   }
 }
+
+@keyframes preloaderPointRotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
