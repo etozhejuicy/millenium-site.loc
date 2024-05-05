@@ -1,7 +1,8 @@
 :root {
   --order-table-gap: 1.563rem;
   --order-table-header-padding-x: 1.875rem;
-  --order-table-header-padding-y: 1.563rem;
+  --order-table-header-padding-y: 0rem;
+  // --order-table-header-padding-y: 1.563rem;  (временно удалено)
   --order-table-header-gap: 0.625rem;
   --order-table-header-font-size: 0.75rem;
   --order-table-header-color: var(--bs-grey);
@@ -112,7 +113,7 @@
       row-gap: var(--order-item-gap);
       column-gap: var(--order-item-gap);
       @media (min-width: 992px) and (max-width: 1199.98px) {
-        flex: 1 0 calc(50% - (var(--order-item-gap) / 2));
+        flex: 0 0 calc(50% - (var(--order-item-gap) / 2));
       }
       @media (min-width: 1200px) {
         flex-direction: row;

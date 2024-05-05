@@ -705,6 +705,7 @@
       <section>
         <div class="container">
           <div class="order-table">
+            <!-- header для таблицы карточек -->
             <div class="order-table-header">
               <div class="order-table-left">
                 <div class="row">
@@ -733,6 +734,7 @@
                 </div>
               </div>
             </div>
+            <!-- body с сеткой карточек -->
             <div class="order-table-body">
               <!-- Карточка заказа -->
               <!-- Если заказ в архиве, то присваиваем к .order-table-item .order-disabled -->
@@ -959,6 +961,122 @@
                           -->
                           <div class="order-status-icon"></div>
                           <div class="order-status-value">Заказан</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-table-item order-disabled">
+                <div class="order-table-info">
+                  <div class="card order-card">
+                    <div class="card-body">
+                      <div class="order-card-table">
+                        <div class="row">
+                          <div class="col-auto">
+                            <div class="order-col-type">
+                              <div class="icon">
+                                <svg
+                                  width="100%"
+                                  height="100%"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  aria-hidden="true"
+                                  focusable="false"
+                                >
+                                  <use
+                                    xlink:href="./assets/sprite.svg#trip"
+                                  ></use>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <div class="order-col-date">
+                              <div class="order-date">07.08.24</div>
+                              <div class="order-time">22:40</div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-xl">
+                            <div class="order-col-info">
+                              <div class="order-link">
+                                <a
+                                  href="javascript://"
+                                  class="link-primary link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover"
+                                  >Заказ №9545345</a
+                                >
+                              </div>
+                              <div class="order-description">
+                                <p>
+                                  Дата командировки: 18.12.2023 - 19.12.2023
+                                </p>
+                                <p>
+                                  Город командировки: Санкт-Петербург
+                                  ПАСС-АВТОТРАНС Междугородный
+                                </p>
+                                <p>Ж/Д билеты: ---</p>
+                                <p>Дата отправления: 28.12.2023</p>
+                                <p>Количество пассажиров: 1</p>
+                              </div>
+                              <div class="order-contributor">
+                                <p class="order-customer">
+                                  ФИО заказчика: Емельянов Антон
+                                </p>
+                                <p class="order-payer">
+                                  Плательщик: Тест компани ООО
+                                </p>
+                              </div>
+                              <div class="order-archive">
+                                <a
+                                  href="javascript://"
+                                  class="link-grey link-offset-3 link-underline-opacity-0 link-underline-opacity-75-hover"
+                                  >Отправить в архив</a
+                                >
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-xl">
+                            <div class="order-col-passenger">
+                              <div class="order-mobile-title">Пассажир:</div>
+                              <div class="order-content">
+                                <p>Юлия Мануйлова</p>
+                                <p>Джессика Запарина</p>
+                                <p>Ксения Запарина</p>
+                                <p>Ксения Запарина</p>
+                                <p>Ксения Запарина</p>
+                                <p>Ксения Запарина</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-xl">
+                            <div class="order-col-agent">
+                              <div class="order-mobile-title">Агент:</div>
+                              <div class="order-content">
+                                <p>Агент не установлен</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-table-status">
+                  <div class="card order-card-status">
+                    <div class="card-body">
+                      <div class="order-col-status">
+                        <!-- статус заказа -->
+                        <div class="order-status">
+                          <!-- 
+                            Иконка статуса заказа регулируется в .order-table-item при помощи селекторов, например: .order-status-success;
+                            Есть четыре статуса заказа:
+                            .order-status-success
+                            .order-status-disabled
+                            .order-status-process
+                            .order-status-ordered
+                          -->
+                          <div class="order-status-icon"></div>
+                          <div class="order-status-value">Аннулирован</div>
                         </div>
                       </div>
                     </div>

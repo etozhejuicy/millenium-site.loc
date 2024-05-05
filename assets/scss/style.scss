@@ -29,7 +29,7 @@
 @import "./layouts/footer";
 @import "./layouts/nav";
 
-// responsive design
+// responsive design (временно удалено)
 // :root {
 //   font-size: calc(100vw / 375 * 14);
 //   @media (min-width: 576px) {
@@ -54,6 +54,10 @@
 //     font-size: calc(100vw / 1600 * 14);
 //   }
 // }
+
+#mysprite {
+  display: none;
+}
 
 html {
   display: none;
