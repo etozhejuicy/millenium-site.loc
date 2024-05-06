@@ -1,6 +1,5 @@
 :root {
-  --bs-font-sans-serif: "SF UI Display", "Helvetica Neue", "Segoe UI", "Roboto",
-    Arial, sans-serif;
+  --bs-font-sans-serif: "SF UI Display", "Helvetica Neue", "Segoe UI", "Roboto", Arial, sans-serif;
   --bs-body-font-size: 0.875rem;
   --bs-body-line-height: 1.5;
   --bs-body-bg: #edeff5;
@@ -26,6 +25,10 @@
   .form-control {
     font-size: $input-font-size;
     padding: ($input-padding-y + 0.125rem) ($input-padding-x + 0.125rem);
+    box-shadow: none;
+    &::placeholder {
+      color: var(--bs-grey);
+    }
   }
 }
 

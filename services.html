@@ -32,16 +32,16 @@
 <body>
   <!-- preloader -->
   <div class="preloader">
-    <div class="container">
+    <div class="preloader-container">
       <div class="preloader-inner">
         <div class="preloader-left">
           <div class="preloader-link">millennium-platform.ru</div>
-          <div class="preloader-fact">
-            <div class="preloader-title">
+          <div class="preloader-fact" preloader-fact-id="">
+            <div class="preloader-title" preloader-title>
               Ecли вы pacпутaeтe cвoю ДHK, тo oнa oкaжeтcя длинoй в 54,72
               миллиapдa килoмeтpoв
             </div>
-            <div class="preloader-text">
+            <div class="preloader-text" preloader-text>
               и будeт пpocтиpaтьcя oт Зeмли дo Плутoнa, и oбpaтнo нa Зeмлю 1З
               paз!
             </div>
@@ -177,7 +177,7 @@
             <!-- header nav -->
             <div class="col-auto align-self-center">
               <nav class="header-nav">
-                <a class="header-nav-link active" href="#">Все заказы</a>
+                <a class="header-nav-link active" href="/services.html">Все заказы</a>
                 <a class="header-nav-link" href="#">Календарь командировок</a>
                 <a class="header-nav-link" href="#">Групповая заявка</a>
                 <a class="header-nav-link" href="#">Пассажиры</a>
@@ -375,15 +375,21 @@
                           <div class="footer-contacts">
                             <div class="footer-contact-item">
                               <div>Москва, Санкт-Петербург и регионы РФ:</div>
-                              <div>8 (495) 138 16 16</div>
+                              <div><a href="tel:8 (495) 138 16 16"
+                                  class="link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">8
+                                  (495) 138 16 16</a></div>
                             </div>
                             <div class="footer-contact-item">
                               <div>Казань:</div>
-                              <div>8 (843) 208 66 36</div>
+                              <div><a href="tel:8 (843) 208 66 36"
+                                  class="link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">8
+                                  (843) 208 66 36</a></div>
                             </div>
                             <div class="footer-contact-item">
                               <div>Самара:</div>
-                              <div>8 (846) 300 26 06</div>
+                              <div><a href="tel:8 (846) 300 26 06"
+                                  class="link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">8
+                                  (846) 300 26 06</a></div>
                             </div>
                           </div>
                         </div>
@@ -428,18 +434,18 @@
                   <div class="row">
                     <div class="col-auto col-xl-12">
                       <a class="footer-partner-logo" href="javascript://" target="_blank">
-                        <img data-src="./assets/images/partners/tch.svg" class="lazyload" />
+                        <img data-src="./assets/images/partners/tch.svg" alt="Logo description" class="lazyload" />
                       </a>
                     </div>
                     <div class="col-auto col-xl-12">
                       <a class="footer-partner-logo" href="javascript://" target="_blank">
-                        <img data-src="./assets/images/partners/iata.svg" class="lazyload" />
+                        <img data-src="./assets/images/partners/iata.svg" alt="Logo description" class="lazyload" />
                       </a>
                     </div>
                   </div>
                 </div>
                 <div class="footer-button">
-                  <button type="button" class="btn btn-icon btn-outline-grey rounded-circle">
+                  <button type="button" class="btn btn-icon btn-outline-grey rounded-circle" scroll-top>
                     <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
                       focusable="false">
                       <use xlink:href="./assets/sprite.svg#arrowUp"></use>

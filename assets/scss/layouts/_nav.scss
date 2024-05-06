@@ -57,6 +57,10 @@
       @media (prefers-reduced-motion: reduce) {
         transition: none;
       }
+      &:active,
+      &.active {
+        color: var(--header-nav-link-hover-color);
+      }
       &:hover,
       &:focus {
         color: var(--header-nav-link-hover-color);

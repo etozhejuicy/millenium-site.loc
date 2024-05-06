@@ -1,5 +1,7 @@
 :root {
   --preloader-zindex: 3000;
+  --preloader-container-max-width: 15.563rem;
+  --preloader-container-padding: 2.188rem;
   --preloader-gap: 2.206rem;
   --preloader-right-gap: 3.269rem;
   --preloader-padding-x: 0;
@@ -25,6 +27,7 @@
     --preloader-point-size: 0.75rem;
   }
   @media (min-width: 1200px) {
+    --preloader-container-max-width: 80.807rem;
     --preloader-gap: 1.781rem;
     --preloader-circle-outer-size: 44.71rem;
     --preloader-circle-inner-size: 30.156rem;
@@ -100,6 +103,17 @@ body {
     background-color: var(--bs-white);
     opacity: 0.5;
   }
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: calc(var(--preloader-container-max-width) + (var(--preloader-container-padding) * 2));
+    min-height: 100%;
+    padding-left: var(--preloader-container-padding);
+    padding-right: var(--preloader-container-padding);
+    margin-left: auto;
+    margin-right: auto;
+  }
   &-show {
     animation-name: preloaderShow;
     animation-timing-function: ease-in;
@@ -114,6 +128,16 @@ body {
       left: 0;
       touch-action: none;
       overflow: hidden;
+    }
+    &-animate {
+      & .preloader-point {
+        animation-name: preloaderPointRotation;
+        animation-timing-function: linear;
+        animation-duration: 13s;
+        animation-fill-mode: backwards;
+        animation-direction: normal;
+        animation-iteration-count: infinite;
+      }
     }
   }
   & > .container {
@@ -143,11 +167,15 @@ body {
     justify-content: space-between;
     width: 100%;
     min-height: 100%;
-    @media screen and (max-width: 1199.98px) {
+    @media screen and (max-width: 767.98px) {
+      max-width: var(--preloader-circle-outer-size);
+    }
+    @media (min-width: 768px) and (max-width: 1199.98px) {
       max-width: calc(15.563rem + var(--preloader-gap));
     }
     @media (min-width: 1200px) {
       align-items: flex-start;
+      max-width: calc(33.375rem + var(--preloader-gap));
     }
   }
   &-right {
@@ -159,6 +187,9 @@ body {
     min-height: 100%;
     row-gap: var(--preloader-right-gap);
     column-gap: var(--preloader-right-gap);
+    @media screen and (max-width: 767.98px) {
+      max-width: var(--preloader-circle-outer-size);
+    }
     & > .preloader-logo {
       display: flex;
       @media (min-width: 1200px) {
@@ -182,10 +213,12 @@ body {
   &-title {
     font-size: var(--preloader-title-font-size);
     line-height: var(--preloader-title-line-height);
+    text-wrap: balance;
   }
   &-text {
     font-size: var(--preloader-text-font-size);
     line-height: var(--preloader-text-line-height);
+    text-wrap: balance;
   }
   &-logo {
     position: relative;
@@ -248,12 +281,6 @@ body {
     top: calc(-1 * (var(--preloader-circle-inner-size) / 2));
     border-radius: 100%;
     background-color: var(--preloader-text-color);
-    animation-name: preloaderPointRotation;
-    animation-timing-function: linear;
-    animation-duration: 13s;
-    animation-fill-mode: backwards;
-    animation-direction: normal;
-    animation-iteration-count: infinite;
     transform-origin: 50% calc((var(--preloader-circle-inner-size) / 2) + (var(--preloader-point-size) / 2));
     transform: rotate(0deg);
   }

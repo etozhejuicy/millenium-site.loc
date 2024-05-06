@@ -2,7 +2,7 @@
     --footer-padding-y: 1.875rem;
     --footer-padding-x: 0;
     --footer-gap-y: 1.875rem;
-    --footer-gap-x: 12rem;
+    --footer-gap-x: 4rem;
     --footer-background-color: var(--bs-white);
     --footer-content-gap-y: 1.875rem;
     --footer-content-gap-x: 6.813rem;
@@ -11,6 +11,9 @@
     --footer-contacts-gap: 0.875rem;
     --footer-partners-gap: 2.266rem;
     --footer-other-gap: 2.652rem;
+    @media (min-width: 1200px) {
+        --footer-gap-x: 12rem;
+    }
 }
 
 .footer {
@@ -32,12 +35,8 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            @media (min-width: 992px) {
-                display: block;
-                bottom: calc(0rem - var(--footer-gap-y));
-                right: 12.313rem;
-            }
             @media (min-width: 1200px) {
+                display: block;
                 bottom: calc(-5.813rem - var(--footer-gap-y));
                 right: 12.313rem;
             }

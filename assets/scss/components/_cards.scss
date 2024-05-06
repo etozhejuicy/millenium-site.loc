@@ -102,12 +102,16 @@
     }
     &-wider {
         width: calc((var(--service-card-width) * 3) + (var(--services-list-gap-x) * 2));
+        min-height: var(--service-card-min-height);
         @media (min-width: 576px) {
             --service-card-padding-y: 1.5rem;
             flex: 1 0 calc(var(--service-card-width) - var(--services-list-gap-x));
         }
         @media (min-width: 992px) {
             flex: 0 0 calc(var(--service-card-width) * 3 + var(--services-list-gap-x) * 2);
+        }
+        @media (min-width: 1200px) {
+            min-height: unset;
         }
     }
     &-content {
