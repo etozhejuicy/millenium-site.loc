@@ -20,6 +20,28 @@
     background-color: var(--footer-background-color);
     overflow: hidden;
     &-inner {
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            display: none;
+            width: 23.75rem;
+            height: 23.75rem;
+            background-image: url("/assets/images/elements/footer/bg.svg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            @media (min-width: 992px) {
+                display: block;
+                bottom: calc(0rem - var(--footer-gap-y));
+                right: 12.313rem;
+            }
+            @media (min-width: 1200px) {
+                bottom: calc(-5.813rem - var(--footer-gap-y));
+                right: 12.313rem;
+            }
+        }
         & > .row {
             --bs-gutter-y: var(--footer-gap-y);
             --bs-gutter-x: var(--footer-gap-x);
@@ -85,6 +107,15 @@
             }
             --bs-gutter-x: var(--footer-partners-gap);
             --bs-gutter-y: var(--footer-partners-gap);
+        }
+    }
+    &-partner {
+        &-logo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            min-height: 100%;
         }
     }
 }

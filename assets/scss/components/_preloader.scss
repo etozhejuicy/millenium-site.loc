@@ -1,5 +1,7 @@
 :root {
   --preloader-zindex: 3000;
+  --preloader-gap: 2.206rem;
+  --preloader-right-gap: 3.269rem;
   --preloader-padding-x: 0;
   --preloader-padding-y: 2.188rem;
   --preloader-background-color: var(--bs-primary);
@@ -14,6 +16,7 @@
   --preloader-text-font-size: 0.75rem;
   --preloader-title-line-height: 100%;
   --preloader-text-line-height: 110%;
+  --preloader-fact-gap: 0.313rem;
   @media (min-width: 768px) {
     --preloader-padding-y: 2.938rem;
     --preloader-circle-outer-size: 34.71rem;
@@ -22,6 +25,7 @@
     --preloader-point-size: 0.75rem;
   }
   @media (min-width: 1200px) {
+    --preloader-gap: 1.781rem;
     --preloader-circle-outer-size: 44.71rem;
     --preloader-circle-inner-size: 30.156rem;
     --preloader-circle-core-size: 10.959rem;
@@ -29,6 +33,7 @@
     --preloader-logo-height: 2.755rem;
     --preloader-title-font-size: 2.813rem;
     --preloader-text-font-size: 1.813rem;
+    --preloader-fact-gap: 0.625rem;
   }
 }
 
@@ -39,7 +44,9 @@ body {
     & .footer {
       opacity: 0;
       visibility: hidden;
-      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+      transition:
+        opacity 0.3s ease-in-out,
+        visibility 0.3s ease-in-out;
     }
     & .preloader {
       opacity: 1;
@@ -52,7 +59,9 @@ body {
     & .footer {
       opacity: 1;
       visibility: visible;
-      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+      transition:
+        opacity 0.3s ease-in-out,
+        visibility 0.3s ease-in-out;
     }
     & .preloader {
       opacity: 0;
@@ -76,8 +85,28 @@ body {
   pointer-events: all;
   user-select: none;
   overflow: hidden;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out,
+  transition:
+    opacity 0.3s ease-in-out,
+    visibility 0.3s ease-in-out,
     transform 0.3s ease-in-out;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bs-white);
+    opacity: 0.5;
+  }
+  &-show {
+    animation-name: preloaderShow;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    animation-direction: normal;
+  }
   &-is {
     &-active {
       position: static;
@@ -100,6 +129,8 @@ body {
     flex: 1;
     width: 100%;
     height: 100%;
+    row-gap: var(--preloader-gap);
+    column-gap: var(--preloader-gap);
     @media (min-width: 1200px) {
       flex-direction: row;
       align-items: stretch;
@@ -112,6 +143,9 @@ body {
     justify-content: space-between;
     width: 100%;
     min-height: 100%;
+    @media screen and (max-width: 1199.98px) {
+      max-width: calc(15.563rem + var(--preloader-gap));
+    }
     @media (min-width: 1200px) {
       align-items: flex-start;
     }
@@ -123,12 +157,20 @@ body {
     justify-content: center;
     width: 100%;
     min-height: 100%;
+    row-gap: var(--preloader-right-gap);
+    column-gap: var(--preloader-right-gap);
     & > .preloader-logo {
       display: flex;
       @media (min-width: 1200px) {
         display: none;
       }
     }
+  }
+  &-fact {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--preloader-fact-gap);
+    column-gap: var(--preloader-fact-gap);
   }
   &-link {
     display: none;
@@ -212,11 +254,7 @@ body {
     animation-fill-mode: backwards;
     animation-direction: normal;
     animation-iteration-count: infinite;
-    transform-origin: 50%
-      calc(
-        (var(--preloader-circle-inner-size) / 2) +
-          (var(--preloader-point-size) / 2)
-      );
+    transform-origin: 50% calc((var(--preloader-circle-inner-size) / 2) + (var(--preloader-point-size) / 2));
     transform: rotate(0deg);
   }
 }

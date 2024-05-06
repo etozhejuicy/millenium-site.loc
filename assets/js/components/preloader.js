@@ -7,6 +7,7 @@ class Preloader {
 
   events() {
     this.init();
+    $('body').addClass('preloader-is-active');
   }
 
   init() {
