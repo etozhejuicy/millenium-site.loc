@@ -19,8 +19,9 @@
 .selectize-input {
   display: block;
   width: 100%;
-  max-height: 2.125rem;
-  padding: $input-padding-y $input-padding-x;
+  max-height: 2.225rem;
+  // padding: $input-padding-y $input-padding-x;
+  padding: 0.5rem 0.875rem;
   font-family: $input-font-family;
   @include font-size($input-font-size);
   font-weight: $input-font-weight;
@@ -42,6 +43,19 @@
       cursor: pointer;
     }
   }
+  & > input {
+    width: 100% !important;
+    font-family: $input-font-family;
+    @include font-size($input-font-size);
+    font-weight: $input-font-weight;
+    line-height: $input-line-height;
+    color: $input-color;
+    appearance: none;
+    &::placeholder {
+      color: var(--bs-grey);
+      opacity: 1;
+    }
+  }
 
   &:focus,
   &.focus {
@@ -50,11 +64,6 @@
     border-color: $input-focus-border-color;
     outline: 0;
     box-shadow: none;
-    // @if $enable-shadows {
-    //   @include box-shadow($input-box-shadow, $input-focus-box-shadow);
-    // } @else {
-    //   box-shadow: $input-focus-box-shadow;
-    // }
   }
 
   &.has-items {
@@ -63,6 +72,9 @@
 
   &.dropdown-active {
     border-radius: $input-border-radius !important;
+    &::before {
+      display: none;
+    }
   }
 
   & > div {
@@ -78,8 +90,12 @@
   }
 
   &::-webkit-date-and-time-value {
-    min-width: 85px; // Seems to be a good minimum safe width
-    height: if(unit($input-line-height) == "", $input-line-height * 1em, $input-line-height);
+    min-width: 85px;
+    height: if(
+      unit($input-line-height) == "",
+      $input-line-height * 1em,
+      $input-line-height
+    );
     margin: 0;
   }
 
@@ -125,7 +141,8 @@
   z-index: var(--#{$prefix}dropdown-zindex);
   display: none; // none by default, but block on "open" of the menu
   min-width: var(--#{$prefix}dropdown-min-width);
-  padding: var(--#{$prefix}dropdown-padding-y) var(--#{$prefix}dropdown-padding-x);
+  padding: var(--#{$prefix}dropdown-padding-y)
+    var(--#{$prefix}dropdown-padding-x);
   margin: 0; // Override default margin of ul
   @include font-size(var(--#{$prefix}dropdown-font-size));
   color: var(--#{$prefix}dropdown-color);
@@ -133,14 +150,16 @@
   list-style: none;
   background-color: var(--#{$prefix}dropdown-bg);
   background-clip: padding-box;
-  border: var(--#{$prefix}dropdown-border-width) solid var(--#{$prefix}dropdown-border-color);
+  border: var(--#{$prefix}dropdown-border-width) solid
+    var(--#{$prefix}dropdown-border-color);
   @include border-radius(var(--#{$prefix}dropdown-border-radius));
   @include box-shadow(var(--#{$prefix}dropdown-box-shadow));
   &-content {
     & .option {
       display: block;
       width: 100%; // For `<button>`s
-      padding: var(--#{$prefix}dropdown-item-padding-y) var(--#{$prefix}dropdown-item-padding-x);
+      padding: var(--#{$prefix}dropdown-item-padding-y)
+        var(--#{$prefix}dropdown-item-padding-x);
       clear: both;
       font-weight: $font-weight-normal;
       font-size: $input-font-size;
