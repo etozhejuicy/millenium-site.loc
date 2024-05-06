@@ -24,7 +24,7 @@
         }
         &-outline {
             &-primary {
-                background-color: rgba(var(--bs-primary-rgb), 0.045);
+                --bs-btn-bg: rgba(var(--bs-primary-rgb), 0.045);
                 --bs-btn-hover-color: var(--bs-white);
                 --bs-btn-active-color: var(--bs-white);
             }

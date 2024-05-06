@@ -1,0 +1,66 @@
+h,
+.h {
+    &-1 {
+        font-feature-settings:
+            "clig" off,
+            "liga" off;
+        font-size: 3.25rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+    }
+    &-2 {
+        font-feature-settings:
+            "clig" off,
+            "liga" off;
+        font-size: 2.75rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+    }
+    &-3 {
+        font-feature-settings:
+            "clig" off,
+            "liga" off;
+        font-size: 1.875rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+    }
+    &-4 {
+        font-feature-settings:
+            "clig" off,
+            "liga" off;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+    }
+    &-5 {
+        font-feature-settings:
+            "clig" off,
+            "liga" off;
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+    }
+    &-6 {
+        font-feature-settings:
+            "clig" off,
+            "liga" off;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}

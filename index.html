@@ -359,7 +359,7 @@
                         <input type="text" class="form-control" id="order_fio" placeholder="ФИО пассажира" />
                       </div>
                       <div class="form-col">
-                        <input type="date" class="form-control" id="order_date" placeholder="Дата заказа" />
+                        <input type="text" class="form-control" id="order_date" placeholder="Дата заказа" />
                       </div>
                       <div class="form-col">
                         <input type="text" class="form-control" id="order_payer" placeholder="Плательщик" />
@@ -769,9 +769,10 @@
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <span class="dropdown-item-text">
-                      <input type="text" class="form-control text-center" placeholder="Номер страницы" value="" />
-                    </span>
+                    <form action="?" class="dropdown-item-text">
+                      <input type="number" id="number_page" min="1" step="1" class="form-control text-center"
+                        placeholder="Номер" value="" />
+                    </form>
                   </li>
                 </ul>
               </div>

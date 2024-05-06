@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-  document.documentElement.style.setProperty("display", "block");
   document.querySelector(".preloader").style.setProperty("display", "block");
+  document.documentElement.style.setProperty("display", "block");
 });
 
 // init jquery
@@ -17,4 +17,5 @@ import "bootstrap";
 // modules
 import "./components/lang";
 import "./components/preloader";
+import "./modules/mask";
 import "./modules/selectize";

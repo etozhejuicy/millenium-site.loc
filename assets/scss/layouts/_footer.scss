@@ -73,7 +73,7 @@
         column-gap: var(--footer-other-gap);
         @media (min-width: 1200px) {
             flex-direction: column;
-            align-items: flex-end;
+            align-items: center;
         }
     }
     &-partners {
