@@ -32,26 +32,33 @@
         // width: 3.5rem;
         width: 4.65rem;
       }
-      @media (min-width: 1400px) {
-        width: 4.85rem;
-      }
+      // @media (min-width: 1400px) {
+      //   width: 4.85rem;
+      // }
     }
     &-info {
       flex: 1 0 auto;
       @media (min-width: 1200px) {
-        width: 28.875rem;
-      }
-      @media (min-width: 1400px) {
+        // width: 28.875rem;
         width: 31.875rem;
       }
+      // @media (min-width: 1400px) {
+      //   width: 31.875rem;
+      // }
     }
     &-passenger {
       @media (min-width: 1200px) {
         // width: 10.313rem;
-        width: 12.35rem;
+        width: 11rem;
+        //   width: 12.35rem;
+        // }
+        // @media (min-width: 1400px) {
+        //   width: 12.313rem;
       }
-      @media (min-width: 1400px) {
-        width: 12.313rem;
+    }
+    &-agent {
+      @media (min-width: 1200px) {
+        width: 10.5rem;
       }
     }
     &-status {
