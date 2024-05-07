@@ -83,16 +83,14 @@
     }
     &-left {
       flex: 1 0 auto;
-      padding: var(--order-table-header-padding-y)
-        var(--order-table-header-padding-x);
+      padding: var(--order-table-header-padding-y) var(--order-table-header-padding-x);
       & > .row {
         --bs-gutter-x: var(--order-table-header-gap);
         --bs-gutter-y: var(--order-table-header-gap);
       }
     }
     &-right {
-      padding: var(--order-table-header-padding-y)
-        var(--order-table-header-padding-x);
+      padding: var(--order-table-header-padding-y) var(--order-table-header-padding-x);
       & > .row {
         --bs-gutter-x: var(--order-table-header-gap);
         --bs-gutter-y: var(--order-table-header-gap);
@@ -295,17 +293,17 @@
   // status types
   &-success {
     & .order-status-icon {
-      background-image: url("/assets/images/order/status/success.svg");
+      background-image: url("/images/order/status/success.svg");
     }
   }
   &-ordered {
     & .order-status-icon {
-      background-image: url("/assets/images/order/status/ordered.svg");
+      background-image: url("/images/order/status/ordered.svg");
     }
   }
   &-process {
     & .order-status-icon {
-      background-image: url("/assets/images/order/status/process.svg");
+      background-image: url("/images/order/status/process.svg");
     }
   }
   &-disabled {
@@ -326,7 +324,7 @@
       color: var(--bs-grey) !important;
     }
     & .order-status-icon {
-      background-image: url("/assets/images/order/status/disabled.svg");
+      background-image: url("/images/order/status/disabled.svg");
     }
   }
 }

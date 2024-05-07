@@ -19,4 +19,4 @@ import "./components/lang";
 import "./components/preloader";
 import "./modules/mask";
 import "./modules/selectize";
-import '../../../js-modules/scroller';
+import '../../js-modules/scroller';

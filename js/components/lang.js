@@ -16,10 +16,10 @@ class Lang {
     changeLanguage(e) {
         if ($(e.currentTarget).attr('id') == 'rus_lang') {
             icon.removeAttr('src')
-            icon.attr('src', '/assets/images/lang/rus.svg');
+            icon.attr('src', '/images/lang/rus.svg');
         } else {
             icon.removeAttr('src')
-            icon.attr('src', '/assets/images/lang/eng.svg');
+            icon.attr('src', '/images/lang/eng.svg');
         }
     }
 }
