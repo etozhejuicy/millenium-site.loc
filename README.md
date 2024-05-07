@@ -3,8 +3,8 @@
 ## Структура
 
 - dist
--- assets
--- images
--- index.html
--- services.html
+-- assets;
+-- images;
+-- index.html;
+-- services.html;
  
